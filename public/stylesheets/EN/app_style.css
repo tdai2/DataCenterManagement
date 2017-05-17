@@ -1,0 +1,224 @@
+/* Filename: app_style.css                 
+ * Project: Aviator via MDS
+ * Team: MegaRAC
+ */
+
+body {
+	font-family: Verdana,Arial,Tahoma, Geneva,  Helvetica, sans-serif;
+	font-size: 12px;
+	margin:0px;
+	padding:5px;
+	}
+
+table {
+	font-family: Verdana,Arial,Tahoma, Geneva,  Helvetica, sans-serif;
+	font-size: 12px;
+	}
+
+.pagetitle {
+	background-color:#FFFFFF; /* #83AFD3; */
+	font-size: 15px;
+	padding:3px;
+	margin-top:5px;
+	}
+
+.sysInfoBox {
+	width: 550px;
+	height: 300px;
+	padding-left: 25px;
+}
+
+.cpuInfoBox {
+    width: 500px;
+    padding-left: 25px;
+}
+
+.sysInfoBox label {
+	font-weight:normal;
+	padding-left: 35px;
+	}
+
+.inputButton,
+.inputButton2X,
+.inputButton3X {
+	font-weight:bold;
+	width:125px;
+	display:block;
+	text-align:center;
+	border-left:1px solid #DDDDDD;
+	border-top:1px solid #DDDDDD;
+	border-right:1px solid #555555;
+	border-bottom:1px solid #555555;
+	background:#E9E9DC;
+	text-decoration:none;
+	color:#000000;
+	font-size:12px;
+	padding-top:5px;
+	padding-bottom:5px;
+	}
+
+.inputButton2X {
+	width:175px;
+	}
+
+.inputButton3X {
+	width:210px;
+	}
+
+.inputButton:hover,
+.inputButton2X:hover,
+.inputButton3X:hover {
+	background:#FFFFE1;
+	}
+
+.inputButton:active,
+.inputButton2X:active,
+.inputButton3X:active {
+	background:#FFFFE1;
+	border-left:1px solid #555555;
+	border-top:1px solid #555555;
+	border-right:1px solid #DDDDDD;
+	border-bottom:1px solid #DDDDDD;
+	}
+
+.btnTray{
+	background:#FFFFFF; /*#B8B89D;*/
+	padding:3px;
+	}
+
+.classicBtn	{
+	background:#D4D0C8;
+	border:1px solid #555555;
+	border-left:1px solid #DDDDEE;
+	border-top:1px solid #DDDDEE;
+	margin-left:10px;
+	font-size:12px;
+	font-family: Verdana,Arial,Tahoma;
+	font-weight:bold;
+	padding:3px;
+	padding-left:10px;
+	padding-right:10px;
+	}
+
+html>body .classicBtn {
+	padding-left:20px;
+	padding-right:20px;
+	}
+
+.floatRight {
+	display:block;
+	float:right;
+	}
+
+#wait {
+	font-family: Verdana,Arial,Tahoma, Helvetica, sans-serif;
+	color:#FFFFFF;
+	text-transform:uppercase;
+	letter-spacing:.3em;
+	font-size:.9em;
+	}
+
+.highlightInfo{
+	background:#C0C0C0;
+	font-weight:bold;
+	font-size:12px;
+	padding:3px;
+	line-height:12px;
+	width:100%;
+	}
+
+.subSection {
+	padding:10px;
+	line-height:22px;
+	}
+
+.lblHeader {
+	font-weight:bold;
+	display:block;
+	padding:5px;
+	width:250px;
+	height:24px;
+	font-size:1.1em;
+	margin:5px;
+	text-align:right;
+}
+
+.lblHeaderTall {
+    font-weight:bold;
+    display:block;
+    padding:5px;
+    width:250px;
+    font-size:1.1em;
+    margin:5px;
+    text-align:right;
+}
+
+.floatRight {
+	display:block;
+	float:right;
+}
+
+.grid {
+	background:#9A9A9A;
+	}
+
+.grid tbody tr {
+	background:#fff;
+	}
+
+.gridHead {
+	font-weight:bold;
+	color:#000;
+	background:#999;
+	}
+	
+.group {
+	display: block;
+	border:1px solid #0860A8;
+	margin:0pt 0.5em 0.5em;
+	padding:0.3em;
+	text-align:left;
+	}
+
+.groupCaption {
+	color:#0860A8;
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size:11pt;
+	font-weight:bold;
+	text-decoration:none;
+	}
+
+.settings_fieldname {
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size:10pt;
+	text-decoration:none;
+	text-align:right;
+	}
+
+.settings_fielddata {
+	text-align:left;
+	}
+
+table.dialogTable {
+	background-color:#FFFFFF;
+	border-width:0px;
+	text-align:left;
+	vertical-align:middle;
+	white-space:nowrap;
+	}
+
+table.center {
+	margin-left:auto;
+	margin-right:auto;
+	}
+
+.center {
+	text-align:center;
+	}
+
+.bold {
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:10pt;
+	font-weight:bold;
+	text-decoration:none;
+	}

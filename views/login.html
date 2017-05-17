@@ -1,0 +1,112 @@
+<html><head>
+<script>
+readCk = function(name)
+{
+	var nameEQ = name + "=";
+	var ca = top.document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	}
+	return null;
+}
+
+//var lang = readCk('lang');
+
+top.gLangSettingSet = false;
+var tempLang = window.navigator.language;
+if(!tempLang)
+{
+    tempLang = window.navigator.browserLanguage;
+}
+tempLang = tempLang.toLowerCase();
+
+if(tempLang == "en-us")
+    lang = "EN";
+else if(tempLang == "zh-cn")
+    lang = "CN";
+else    // Default to English
+    lang = "EN";
+top.document.cookie = "lang="+lang+"; expires=Wed, 1 Dec 2027 20:47:11 UTC; path=/";
+
+
+if(lang)
+	top.gLangSetting = lang;
+else
+	top.gLangSetting = "EN";
+
+top.gLangSettingSet=true; 
+</script>
+  <script>
+		var cssfile=document.createElement("link");
+		cssfile.setAttribute("rel", "stylesheet");
+		cssfile.setAttribute("type", "text/css");
+		cssfile.setAttribute("href", "../public/stylesheets/"  + top.gLangSetting + "/login.css");
+		document.getElementsByTagName("head")[0].appendChild(cssfile);
+  </script>  
+  <title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script src="../public/lib/ui.js"></script>
+	<script src="../public/lib/eLang.js"></script>
+	<script>
+		document.write("<script language = \"Javascript\", src = \"../public/str/" + top.gLangSetting + "/global_str.js\"><\/script>");
+		document.write("<script language = \"Javascript\", src = \"../public/str/" + top.gLangSetting + "/login_str.js\"><\/script>");
+	</script>
+	<script src="../public/impl/login_imp.js"></script>
+
+	<script>
+	onload = function() {
+		if (top.gLangSettingSet == true) {
+		var elmt = document.getElementById("LOGIN_VALUE_1");
+		elmt.setAttribute("value", eLang.getString("login", "STR_LOGIN_BTN"));
+		//doInit();
+		}
+	}
+	</script>
+</head><body>
+	
+    <table style="margin: 0px; padding: 0px;" border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr>
+			<td id="headerleft" width="618"><img src="../public/images/res/banner_left.png" alt="" height="85" width="618"></td> 
+			<td id="headermiddle"> <img src="../public/images/res/banner_background.png" alt="" height="85" width="100%"></td>
+			<td id="headerright" width="345"><img src="../public/images/res/banner_right.png" alt="" height="85" width="345"></td>
+		</tr>
+		</tbody></table>
+
+		&nbsp;
+			<p>&nbsp;</p>
+		
+	        
+		
+    <div align="center">
+    <div class="shadow">
+<!--
+	<h3>
+	  <script>
+	    document.writeln(eLang.getString("login","STR_LOGIN_PLS_LOGIN"));
+	  </script>
+	</h3>
+-->
+    <div class="loginBox">
+         <div class="lbFields">
+              <form action="javascript://" autocomplete="off">
+                    <p id="msglbl">
+<script>document.writeln(eLang.getString("login", "STR_LOGIN_PLS_LOGIN"));</script>
+</p>
+                    <label class="loginlabel">
+<script>document.writeln(eLang.getString("login", "STR_LOGIN_USERNAME"));</script>
+ </label><input id="login_username" name="T1" size="20" style="width:146px;" tabindex="1" type="text"><br><br>
+                    <label class="loginlabel">
+<script>document.writeln(eLang.getString("login", "STR_LOGIN_PASSWORD"));</script>
+ </label><input id="login_password" name="T2" size="20" style="width:146px;" tabindex="2" type="password"><br><br>
+ <!--                   <input id="LOGIN_VALUE_1" class="button" name="Login" onMouseDown="DoLogin();" type="button">-->
+                    <input id="LOGIN_VALUE_1" class="button" name="Login" type="button">
+              </form>
+         </div> 
+   
+    </div>
+    </div>
+    </div>
+
+</body></html>

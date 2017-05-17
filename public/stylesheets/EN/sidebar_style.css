@@ -1,0 +1,148 @@
+body {
+    background-color: #FFFFFF;
+    margin-right:0px;
+	}
+
+a.navBtnsLvl0,
+a.navBtnsLvlCur {
+		font-family: Verdana,Arial,Tahoma;
+		font-weight: bold;
+		font-size: 12px;
+		display: block;
+		text-decoration: none;
+		color: #0860A8;
+		margin-bottom:7px;
+		padding-left:17px;
+	}
+
+a.navBtnsLvl0:hover,
+a.navBtnsLvlCur {
+		display: block;
+		color: #83AFD3;
+	}
+
+a.navBtnsLvl1 {
+		display: block;
+		font-family: Verdana,Arial,Tahoma;
+		font-size: 12px;
+		font-weight: bold;
+		text-decoration: none;
+		color: #0860A8;
+		margin-bottom:7px;
+		padding-bottom: 5px;
+		border-bottom:thin solid #B2B2B2;
+		margin-left:0px;
+		padding-left:0px;
+	}
+	
+a.navBtnsLvl1:hover {
+		display: block;
+		color: #83AFD3;
+		font-weight:bold;
+	}
+	
+a.navBtnsLvl1:active,
+a.navBtnsLvlCur:active {
+		display: block;
+	/*	background-color:#f4f4e8;  */
+		color: red /*#83AFD3;*/
+		font-size:14px;
+	}
+
+p {
+		margin-bottom:0px;
+		padding-bottom:0px;
+		margin-top:8px;
+		padding-top:0px;
+	}
+
+a.level0 {
+		display: block;
+		font-weight: bold;
+		padding-left: 12px;
+		}
+
+a.level0:hover {
+		display: block;
+		color:#83AFD3;
+		}
+
+/*
+a.logout {
+	    font-family: Verdana,Arial,Tahoma;
+		font-weight:bold;
+		font-size: 12px;
+		padding-left:22px;
+		font-weight:bold;
+		color:black;
+	    text-decoration:none;
+	}
+
+a.logout:hover {
+		padding-left:22px;
+		font-weight:bold;
+		background-color:#f4f4e8;
+		color:#ff7f00;
+	}
+/* 
+a.refreshlink {
+	    font-family: Verdana,Arial,Tahoma;
+		font-weight:bold;
+		font-size: 12px;
+		padding-left:22px;
+		font-weight:bold;
+   		color:black;
+		text-decoration:none;
+	}
+
+	a.refreshlink:hover {
+		padding-left:22px;
+		font-weight:bold;
+		background-color:#f4f4e8;
+		color:#ff7f00;
+	}
+*/
+
+a.disconnect {
+	    font-family: Verdana,Arial,Tahoma;
+		font-weight:bold;
+		font-size: 12px;
+		padding-left:22px;
+		font-weight:bold;
+		color:black;
+	    text-decoration:none;
+	}
+
+a.disconnect:hover {
+		padding-left:22px;
+		font-weight:bold;
+	/*	background-color:#f4f4e8; */
+		color:#ff7f00;
+	}
+
+a.level1 {
+		font-size:11px;
+		padding-left:18px;
+	}
+
+a.level2 {
+		font-size:10px;
+		font-weight:bold;
+		padding-left:30px;
+	}
+
+/* Options is no longer used - jco 4/30/08
+	#options {
+		font-family: Verdana,Arial,Tahoma;
+		font-weight: bold;
+		font-size: 16px;
+		text-align: left;
+		color:black;
+		height:40px;
+	}
+*/
+
+#_optioncontainer {
+		margin-left:0px;
+		padding-left:0px;
+	}

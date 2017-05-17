@@ -1,0 +1,80 @@
+//-------------------------------------//
+// Time zone strings
+//-------------------------------------//
+
+eLang.tz_strings = {};
+
+eLang.tz_strings["STR_TZ0"]  = "(GMT-12:00)埃尼威托克岛，夸贾林";
+eLang.tz_strings["STR_TZ1"]  = "(GMT-11:00)中途岛，萨摩亚";
+eLang.tz_strings["STR_TZ2"]  = "(GMT-10:00)夏威夷";
+eLang.tz_strings["STR_TZ3"]  = "(GMT-09:00)阿拉斯加州";
+eLang.tz_strings["STR_TZ4"]  = "(GMT-08:00)太平洋时间（美国和加拿大）；提华纳";
+eLang.tz_strings["STR_TZ5"]  = "(GMT-07:00)亚利桑那";
+eLang.tz_strings["STR_TZ6"]  = "(GMT-07:00)山地时间（美国和加拿大）";
+eLang.tz_strings["STR_TZ7"]  = "(GMT-06:00)中美洲";
+eLang.tz_strings["STR_TZ8"]  = "(GMT-06:00)中部时间（美国和加拿大）";
+eLang.tz_strings["STR_TZ9"]  = "(GMT-06:00)墨西哥城";
+eLang.tz_strings["STR_TZ10"]  = "(GMT-06:00)萨斯喀彻温省";
+eLang.tz_strings["STR_TZ11"]  = "(GMT-05:00)波哥大，利马，基多";
+eLang.tz_strings["STR_TZ12"]  = "(GMT-05:00)美国东部时间（美国和加拿大）";
+eLang.tz_strings["STR_TZ13"]  = "(GMT-05:00)印第安纳州（东）";
+eLang.tz_strings["STR_TZ14"]  = "(GMT-04:00)大西洋时间（加拿大）";
+eLang.tz_strings["STR_TZ15"]  = "(GMT-04:00)加拉加斯，拉巴斯";
+eLang.tz_strings["STR_TZ16"]  = "(GMT-04:00)圣地亚哥";
+eLang.tz_strings["STR_TZ17"]  = "(GMT-03:30)纽芬兰";
+eLang.tz_strings["STR_TZ18"]  = "(GMT-03:00)巴西利亚";
+eLang.tz_strings["STR_TZ19"]  = "(GMT-03:00)布宜诺斯艾利斯，乔治敦";
+eLang.tz_strings["STR_TZ20"]  = "(GMT-03:00)格陵兰";
+eLang.tz_strings["STR_TZ21"]  = "(GMT-01:00)亚速尔群岛";
+eLang.tz_strings["STR_TZ22"]  = "(GMT-01:00)佛得角是";
+eLang.tz_strings["STR_TZ23"]  = "(GMT)卡萨布兰卡，蒙罗维亚";
+eLang.tz_strings["STR_TZ24"]  = "(GMT)格林威治标准时间：都柏林，爱丁堡，里斯本，伦敦";
+eLang.tz_strings["STR_TZ25"]  = "(GMT+01:00)阿姆斯特丹，柏林，伯尔尼，罗马，斯德哥尔摩，维也纳";
+eLang.tz_strings["STR_TZ26"]  = "(GMT+01:00)贝尔格莱德，布拉迪斯拉发，布达佩斯，卢布尔雅那，布拉格";
+eLang.tz_strings["STR_TZ27"]  = "(GMT+01:00)布鲁塞尔，哥本哈根，马德里，巴黎";
+eLang.tz_strings["STR_TZ28"]  = "(GMT+01:00)萨拉热窝，斯科普里，索非亚，维尔纽斯，华沙，萨格勒布";
+eLang.tz_strings["STR_TZ29"]  = "(GMT+01:00)非洲中西部";
+eLang.tz_strings["STR_TZ30"]  = "(GMT+02:00)雅典，伊斯坦布尔，明斯克";
+eLang.tz_strings["STR_TZ31"]  = "(GMT+02:00)布加勒斯特";
+eLang.tz_strings["STR_TZ32"]  = "(GMT+02:00)开罗";
+eLang.tz_strings["STR_TZ33"]  = "(GMT+02:00)哈拉雷，比勒陀利亚";
+eLang.tz_strings["STR_TZ34"]  = "(GMT+02:00)赫尔辛基，里加，塔林";
+eLang.tz_strings["STR_TZ35"]  = "(GMT+02:00)耶路撒冷";
+eLang.tz_strings["STR_TZ36"]  = "(GMT+03:00)巴格达";
+eLang.tz_strings["STR_TZ37"]  = "(GMT+03:00)科威特，利雅得";
+eLang.tz_strings["STR_TZ38"]  = "(GMT+03:00)莫斯科，圣彼得堡，伏尔加格勒";
+eLang.tz_strings["STR_TZ39"]  = "(GMT+03:00)内罗毕";
+eLang.tz_strings["STR_TZ40"]  = "(GMT+03:30)德黑兰";
+eLang.tz_strings["STR_TZ41"]  = "(GMT+04:00)阿布扎比，马斯喀特";
+eLang.tz_strings["STR_TZ42"]  = "(GMT+04:00)巴库，第比利斯，埃里温";
+eLang.tz_strings["STR_TZ43"]  = "(GMT+04:30)喀布尔";
+eLang.tz_strings["STR_TZ44"]  = "(GMT+05:00)叶卡捷琳堡";
+eLang.tz_strings["STR_TZ45"]  = "(GMT+05:00)伊斯兰堡，卡拉奇，塔什干";
+eLang.tz_strings["STR_TZ46"]  = "(GMT+05:30)加尔各答，钦奈，孟买，新德里";
+eLang.tz_strings["STR_TZ47"]  = "(GMT+05:45)加德满都";
+eLang.tz_strings["STR_TZ48"]  = "(GMT+06:00)阿拉木图，新西伯利亚";
+eLang.tz_strings["STR_TZ49"]  = "(GMT+06:00)阿斯塔纳，达卡";
+eLang.tz_strings["STR_TZ50"]  = "(GMT+06:00)斯里贾亚瓦德纳普拉";
+eLang.tz_strings["STR_TZ51"]  = "(GMT+06:30)仰光";
+eLang.tz_strings["STR_TZ52"]  = "(GMT+07:00)曼谷，河内，雅加达";
+eLang.tz_strings["STR_TZ53"]  = "(GMT+07:00)克拉斯诺亚尔斯克";
+eLang.tz_strings["STR_TZ54"]  = "(GMT+08:00)北京，重庆，香港，乌鲁木齐";
+eLang.tz_strings["STR_TZ55"]  = "(GMT+08:00)伊尔库茨克，乌兰巴托";
+eLang.tz_strings["STR_TZ56"]  = "(GMT+08:00)吉隆坡，新加坡";
+eLang.tz_strings["STR_TZ57"]  = "(GMT+08:00)珀斯";
+eLang.tz_strings["STR_TZ58"]  = "(GMT+08:00)台北";
+eLang.tz_strings["STR_TZ59"]  = "(GMT+09:00)大阪，札幌，东京";
+eLang.tz_strings["STR_TZ60"]  = "(GMT+09:00)首尔";
+eLang.tz_strings["STR_TZ61"]  = "(GMT+09:00)雅库茨克";
+eLang.tz_strings["STR_TZ62"]  = "(GMT+09:30)阿德莱德";
+eLang.tz_strings["STR_TZ63"]  = "(GMT+09:30)达尔文";
+eLang.tz_strings["STR_TZ64"]  = "(GMT+10:00)布里斯班";
+eLang.tz_strings["STR_TZ65"]  = "(GMT+10:00)堪培拉，墨尔本，悉尼";
+eLang.tz_strings["STR_TZ66"]  = "(GMT+10:00)关岛，莫尔兹比港";
+eLang.tz_strings["STR_TZ67"]  = "(GMT+10:00)霍巴特";
+eLang.tz_strings["STR_TZ68"]  = "(GMT+10:00)符拉迪沃斯托克";
+eLang.tz_strings["STR_TZ69"]  = "(GMT+11:00)马加丹，所罗门群岛，新喀里多尼亚";
+eLang.tz_strings["STR_TZ70"]  = "(GMT+12:00)奥克兰，惠灵顿";
+eLang.tz_strings["STR_TZ71"]  = "(GMT+12:00)斐济，堪察加半岛，马绍尔群岛";
+//----------------------------------------------------------------------------//
+//----------------------------------------------------------------------------//

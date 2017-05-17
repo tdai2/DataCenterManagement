@@ -1,0 +1,26 @@
+eLang.chassistype_strings={};
+/* Chassis Type strings */
+eLang.chassistype_strings[0] = "Unknown";
+eLang.chassistype_strings[1] = "其他";
+eLang.chassistype_strings[2] = "Unknown";
+eLang.chassistype_strings[3] = "桌面";
+eLang.chassistype_strings[4] = "薄型桌面";
+eLang.chassistype_strings[5] = "比萨盒";
+eLang.chassistype_strings[6] = "小型塔式机箱";
+eLang.chassistype_strings[7] = "塔式";
+eLang.chassistype_strings[8] = "便携式";
+eLang.chassistype_strings[9] = "笔记本电脑";
+eLang.chassistype_strings[10] = "笔记本";
+eLang.chassistype_strings[11] = "手持";
+eLang.chassistype_strings[12] = "扩充基座";
+eLang.chassistype_strings[13] = "所有一体";
+eLang.chassistype_strings[14] = "小型笔记本电脑";
+eLang.chassistype_strings[15] = "节省空间";
+eLang.chassistype_strings[16] = "便当盒";
+eLang.chassistype_strings[17] = "主服务器机箱";
+eLang.chassistype_strings[18] = "扩展机箱";
+eLang.chassistype_strings[19] = "子机箱";
+eLang.chassistype_strings[20] = "总线扩展机箱";
+eLang.chassistype_strings[21] = "外设机箱";
+eLang.chassistype_strings[22] = "RAID机箱";
+eLang.chassistype_strings[23] = "机架安装机箱";

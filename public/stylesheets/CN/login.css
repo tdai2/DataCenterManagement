@@ -1,0 +1,63 @@
+﻿body{
+  background-color: #0860A8;
+  margin:0px;
+  padding:0px;
+}
+
+.shadow{
+  width:400px;
+  height:150px;
+  text-align:left;
+}
+
+.shadow h3{
+  font-family:Verdana,Arial,Tahoma,"黑体";
+  font-size:1.3em;
+}
+
+.loginBox{
+  height:147px;
+  border:1px solid #888888;
+  color:#000000;
+  font-family:Verdana,Arial,Tahoma,"黑体";
+  font-size:13px;
+  background:#FFFFFF;
+  padding:10px;
+  text-align:center;
+}
+
+.loginBox form{
+	margin:0px;
+	padding:0px;
+}
+
+label{
+  font-weight:bold;
+  padding-right:5px;
+  font-size:14px;
+  width:55px;
+  text-align:right;
+  display:inline-block
+}
+
+#msglbl{
+  font-family:Verdana,Arial,Tahoma,"黑体";
+  font-size:14px;
+  font-weight:bold;
+}
+
+.credits{
+  display:block;
+  float:right;
+  width:155px;
+}
+
+.loginlabel{
+  font-weight:bold;
+  padding-left:5px;
+  font-size:13px;
+  width:55px;
+  text-align:right;
+  display:inline-block
+}
+

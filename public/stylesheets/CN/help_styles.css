@@ -1,0 +1,159 @@
+﻿body {
+	display: block;
+	font-family: Verdana,Arial,Tahoma,"宋体";
+	font-size: 14px;
+	color:black;
+	text-decoration:none;
+	background-color: #F0F0F0;
+	}
+
+.closeX {
+	display:block;
+	float:right;
+	font-size: 13px;
+	font-weight:bold;
+	margin-bottom:5px;
+	}
+
+h2 {
+	font-size: 13px;
+	font-family: Verdana,Arial,Tahoma,"宋体";
+	font-weight:bold;
+	color:#black;
+	margin-top:6px;
+	margin-bottom:3px;
+/*
+	font-size: 12px;
+	font-style:italic;
+	margin-bottom:5px;
+*/
+	}
+
+h3 {
+	font-size: 14px;
+	margin-bottom:0px;
+	background-color:#83AFD3;
+	}
+
+h4 {
+	font-size: 14px;
+	font-style: Arial,"宋体";
+	margin-bottom:0px;
+	}
+
+ul
+{
+	margin: 3px;
+	padding-left:10px;
+}
+
+li
+{
+	margin: 0px;
+	list-style-type:none;
+	font-size: 13px;
+}
+
+#helptitle
+{
+	font-family: Verdana,Arial,Tahoma,Helvetica,sans-serif,"宋体";
+	font-size:16px;
+	font-style:normal;
+	font-weight:bold;
+	color:black;
+	}
+
+#helpbutton {
+	background-color:green; /* #83AFD3 */
+	}
+
+p {
+	margin-top: 0px;
+	margin-bottom: 6px;
+	font-size: 14px;
+	font-weight:normal;
+	}
+
+li {
+	margin-top: 3px;
+	}
+
+.closeBtn {
+	border:1px solid #F0F0F0;
+	font-size:14px;
+	font-style:normal;
+	font-weight:bold;
+	color:#FFFFFF;
+	text-decoration:none;
+	padding-left:3px;
+	padding-right:3px;
+	background-color:#0860A8;
+	filter:alpha(opacity=50);-moz-opacity:.50;opacity:.50;
+	}
+
+.closeBtn:hover {
+	filter:alpha(opacity=50);-moz-opacity:.50;opacity:.50;
+	color:#0860A8;
+	background-color:white;
+	}
+
+.helpmainheadseparator {
+	margin-top: 15px;
+	border-top: thin dotted red; 
+	padding-top: 25px;
+	}
+
+.helpmainhead {
+/*
+	margin-top:30px;
+	border-top: medium dashed #0860a8;
+	padding-top:20px;
+*/
+	font-family: Verdana,Arial,Tahoma,"宋体";
+	font-size:14px;
+	font-weight:bold;
+	font-style:normal;
+	color:#0860A8;
+	margin-bottom:10px;
+	}
+
+.helpactionhead {
+	margin-top: 10px;
+	border-top: thin solid #0860A8; 
+	padding-top: 3px;
+	width: 60px;
+	padding-bottom: 3px;
+	border-bottom: thin solid #0860A8; 
+	font-family: Verdana,Arial,Tahoma,"宋体";
+	font-size:14px;
+	font-weight:bold;
+	font-style:italic;
+	color:#0860A8;
+	}
+
+.helpbtn {
+	font-family: Verdana,Arial,Tahoma,"宋体";
+	font-size: 14px;
+	padding-left:22px;
+	font-weight:bold;
+  	color:black;
+   	text-decoration:none;
+	}
+
+.heading {
+	font-weight:bold;
+	font-size: 14px;
+	margin-bottom:0px;
+	margin-top:0px;
+	text-decoration:underline;
+	}
+
+.actionsub {
+	font-size: 13px;
+	font-family: Verdana,Arial,Tahoma,"宋体";
+	font-weight:bold;
+	color:#0860A8;
+	margin-top:10px;
+	margin-bottom:3px;
+	}
+	
