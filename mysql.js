@@ -26,7 +26,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '.')));
 
 const Sequelize = require("sequelize");
-const config = require('./config');
+const config = require('./config_test');
 
 var sequelize = new Sequelize(config.database,config.username,config.password,{
   host: config.host,
@@ -43,7 +43,7 @@ var User = sequelize.define(
    {
      id : {
        field : 'id',
-       type: Sequelize.STRING(20),
+       type: Sequelize.STRING(50),
        primaryKey : true
      },
      uname:{
@@ -65,7 +65,19 @@ var User = sequelize.define(
        field : "userPrivilege",
        type: Sequelize.STRING(20),
        allowNull:false
-     }
+     },
+      createdAt : {
+        type:Sequelize.BIGINT,
+        allowNull: false
+    },
+    updatedAt : {
+        type: Sequelize.BIGINT,
+        allowNull: false
+    },
+    version: {
+        type: Sequelize.BIGINT,
+        allowNull: false
+    }
    },
    {
        timestamps : false
@@ -78,7 +90,10 @@ sequelize.sync().then(function(){
    uname : 'Tony',
    upassword : 'superuser',
    uPrivilege : 'superuser',
-   uId : '11341084'
+   uId : '11341084',
+   createdAt : 1321,
+   updatedAt : 1231,
+   version : 0
   });
 });
 
