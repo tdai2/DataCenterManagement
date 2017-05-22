@@ -15,8 +15,13 @@ module.exports.submit = function(req,res,next){
   console.log(data.uId);
   User.findOne({where:{uId:data.uId}}).then(user=>{
     console.log(JSON.stringify(user));
-    if(user.uPassword === data.uPassword){
-      res.redirect('/index');
+    if(user.upassword == data.upassword){
+      res.redirect('/welcome');
+      console.log('Loing in successfully')
+    }
+    else{
+      res.redirect('/reject');
+      console.log('Loing in failed')
     }
   });
 };

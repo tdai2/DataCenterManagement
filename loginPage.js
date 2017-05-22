@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 //var index = require('./routes/index');
 //var users = require('./routes/users');
 var login = require('./routes/login');
+var credentials = require('./credentials');
 
 var app = express();
 
@@ -21,7 +22,7 @@ app.set('view engine', 'jade');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
+app.use(cookieParser(credentials.cookieSecret));
 app.use(express.static(path.join(__dirname, '.')));
 app.use(express.static(path.join(__dirname,'pubilc')))
 app.use(bodyParser())
@@ -29,9 +30,18 @@ app.use(bodyParser())
 app.get('/login',login.form);
 app.post('/login', login.submit )
 
-app.use('/', function(req,res){
+app.use('/login', function(req,res){
   res.sendFile(__dirname+'/views/login.html');
-  });
+});
+
+app.use('/welcome',function(req,res){
+  res.render('welcome',{title:"Tony"});
+});
+
+app.use('/reject',function(req,res){
+  res.render('reject',{title:"Tony"})
+});
+
 
 const model = require('./model');
 let User = model.User;
