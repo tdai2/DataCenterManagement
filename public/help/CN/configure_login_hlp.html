@@ -1,0 +1,35 @@
+<html>
+  <head>
+ 	<title>登录帮助</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=GB2312">
+  	<link href='../../style/CN/help_styles.css' rel='stylesheet' type='text/css'/>
+  </head>
+  <body>
+	<div class='closeX'><a href='javascript://' class='closeBtn' onclick='top.frames["header"].closeHelp();'>X</a></div>
+
+	<div class='helpmainhead'>登录-帮助</div>
+		<p>本页用于服务器管理配置登录安全设置</p>
+	<h2>登录失败尝试</h2>
+		<p>
+			在用户被锁之前，允许用户设置登录失败的尝试次数。0表示不被锁，可尝试任意次。默认为3次。
+		</p>
+	<h2> 用户被锁时限(分钟)</h2>
+		<p>
+			设置用户被锁之后允许再次尝试登录需要等待的分钟数。0表示不被锁，并解锁当前所有被锁的用户。默认是1分钟。
+		</p>
+	<h2>强制使用HTTPS协议</h2>
+		<p>
+			启用此选项强制用户使用HTTPS协议进行网络安全登录。这将使用上传的证书，详见"配置->SSL"。
+		</p>
+	<h2>网页会话超时</h2>
+		<p>	
+		   以秒为单位设置最大网页服务超时时限。超时时间的设置范围在60s和10800s之间，默认为1800s。
+		</p>
+
+	<div class='helpactionhead'>操作</div>
+
+	<div class='actionsub'>保存</div>
+		<p>点击按钮保存已更改内容</p>
+
+  </body>
+</html>

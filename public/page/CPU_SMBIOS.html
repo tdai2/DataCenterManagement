@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+  <script>
+		var cssfile=document.createElement("link");
+		cssfile.setAttribute("rel", "stylesheet");
+		cssfile.setAttribute("type", "text/css");
+		cssfile.setAttribute("href", "../style/"  + top.gLangSetting + "/app_style.css");
+		document.getElementsByTagName("head")[0].appendChild(cssfile);
+  </script>  
+  <script src="../lib/bitset.js"></script>
+  <script type="text/javascript" src="../lib/listgrid.js"></script>
+  <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="../lib/ui.js"></script>
+    <script src="../lib/eLang.js"></script>
+    <script>
+        document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/global_str.js\"><\/script>");
+        document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/cpu_smbios_str.js\"><\/script>");
+    </script>
+    <script src="../impl/cpu_smbios_imp.js"></script>
+
+    <script>
+    onload = function() {
+        if (top.gLangSettingSet == true) {
+
+            doInit();
+        }
+    }
+    </script>
+</head>
+    <body>
+        <p>
+        <script>document.writeln(eLang.getString("cpu_smbios", "STR_ASSET_CPUDESCR"));</script>
+        </p>
+        <h3 class="pagetitle"><div class="floatRight" id="wait"></div></h3>
+      <div id="_mainbox0" class="cpuInfoBox" style="padding-bottom:25px;">
+      </div>
+      <div id="_mainbox1" class="cpuInfoBox" style="padding-bottom:25px;">
+      </div>
+      <div id="_mainbox2" class="cpuInfoBox" style="padding-bottom:25px;">
+      </div>
+      <div id="_mainbox3" class="cpuInfoBox" style="padding-bottom:25px;">
+      </div>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+  <head>
+ 	<title>报警邮件帮助</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+  	<link href='../../style/CN/help_styles.css' rel='stylesheet' type='text/css'/>
+  </head>
+  <body>
+	<div class='closeX'><a href='javascript://' class='closeBtn' onclick='top.frames["header"].closeHelp();'>X</a></div>
+
+	<div class='helpmainhead'>报警邮件-帮助</div>
+		<p>输入报警邮件的配置参数，然后点击“保存”按钮。</p>
+
+	<h2>网络通道</h2>
+	   <p>选择一个网络通道来设置。每一个通道都有自己的配置。网络故障转移启用后，将只列出一个网络通道用于配置。</p>
+	<h2>SMTP服务器IP</h2>
+	   <p>报警邮件将被送达的远程SMTP邮件服务器的IP地址。</p>
+	   <ul>
+	      <li>- IP地址由4组数字组成，以点分开，类似"xxx.xxx.xxx.xxx"。</li>
+		  <li>- "xxx"范围为0~255。</li>
+		  <li>- 第一组“xxx”不能为0。</li>
+	   </ul>
+	<h2>发送地址</h2>
+	   <p>发送地址是将会填入报警邮件“发件人”一栏的邮件发送地址。</p>
+	<h2>本地主机名</h2>
+	   <p>产生报警的本地主机名。它将被加入送出的报警邮件里。</p>
+	   <ul>
+	      <li>- 本地主机名是一个最长为18位，由字母和数字组成的字符串。</li>
+	      <li>- 不允许出现空格和特殊字符。</li>
+	   </ul>
+
+	<div class='helpactionhead'>操作</div>
+
+	<div class='actionsub'>保存</div>
+		<p>点击按钮以保存新的报警邮件设置。</p>
+  </body>
+</html>

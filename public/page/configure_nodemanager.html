@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+  <script>
+		var cssfile=document.createElement("link");
+		cssfile.setAttribute("rel", "stylesheet");
+		cssfile.setAttribute("type", "text/css");
+		cssfile.setAttribute("href", "../style/"  + top.gLangSetting + "/app_style.css");
+		document.getElementsByTagName("head")[0].appendChild(cssfile);
+  </script>  
+  <link href="../lib/listgrid.css" rel="stylesheet" type="text/css" /> 
+  <script type="text/javascript" src="../lib/bitset.js"></script>
+  <script type="text/javascript" src="../lib/eVal.js"></script>
+  <script type="text/javascript" src="../lib/listgrid.js"></script>
+  <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="../lib/ui.js"></script>
+    <script src="../lib/eLang.js"></script>
+    <script>
+        document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/global_str.js\"><\/script>");
+        document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/configure_nodemanager_str.js\"><\/script>");
+    </script>
+    <script src="../impl/configure_nodemanager_imp.js"></script>
+
+
+
+    <script>
+    onload = function() {
+        if (top.gLangSettingSet == true) {
+            document.title = eLang.getString("configure_nodemanager", "STR_CONF_NM_PAGE_TITLE");
+            doInit();
+        }
+    }
+    </script>
+</head>
+<body>
+<h3 class="pagetitle"><div class="floatRight" id="wait"></div>
+<script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_PAGE_TITLE"));</script>
+</h3>
+
+<p>
+<script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_PAGE_DESC"));</script>
+</p>
+
+<br style="clear:both" />
+<div id="_PolicyListHolder"></div>
+<br>
+<h2><script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_ADDEDIT"));</script></h2>
+<table cellspacing="0" cellpadding="0" border="0" width="600">
+    <tr>
+        <td style="width: 200px;">
+            <b><script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SETHEAD_POLICY"));</script></b>
+            <input type="text" id="_inputPolicy" maxlength="3" />
+        </td>
+        <td style="width: 125px;">
+            <input type="checkbox" id="_inputEnabled" value="0" />
+            <b><script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_ENABLED"));</script></b>
+        </td>
+        <td style="width: 150px;">
+            <input type="checkbox" id="_inputShutdown" value="rel" />
+            <b><script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SETHEAD_SHUTDOWN"));</script></b>
+        </td>
+        <td style="width: 125px;">
+            <input type="checkbox" id="_inputAlert" value="rel" />
+            <b><script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SETHEAD_ALERT"));</script></b>
+        </td>
+    </tr>
+</table><br>
+<table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+        <td style="font-weight: bold" align="left">
+            <span id="_policyLimitType"><script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_PWRLIMIT"));</script></span>
+            <input type="text" id="_inputPowerLimit" maxlength="10" />
+        </td>
+        <td align="left">
+            <div id="_powerUnits"><script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_UNIT_WATTS"));</script></div>
+        </td>
+    </tr>
+</table>
+<br/>
+<table cellspacing="0" cellpadding="0" border="0" width="400">
+    <tr>
+        <td>
+            <b><script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_TITLE"));</script></b>
+        </td>
+        <td>
+            <input type="radio" name="useSuspendPeriodYesNo" id="_useSuspendYes" value="rel" />
+            <script>document.writeln(eLang.getString("common", "STR_YES"));</script>
+        </td>
+        <td>
+            <input type="radio" name="useSuspendPeriodYesNo" id="_useSuspendNo" value="rel" />
+            <script>document.writeln(eLang.getString("common", "STR_NO"));</script>
+        </td>
+    </tr>
+    <tr id="_SuspendView">
+        <td>
+            <b><script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_VIEW"));</script></b>
+        </td>
+        <td>
+            <input type="radio" name="viewType" id="_viewEnableTimes" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_ENABLE"));</script>
+        </td>
+        <td>
+            <input type="radio" name="viewType" id="_viewSuspendTimes" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_SUSPEND"));</script>
+        </td>
+    </tr>
+</table>
+    <div id="_SuspendType"><b><div id="_SuspendTypeExpanation"></div></b></div>
+<table id="_suspendPoliciesOuter" cellspacing="0" cellpadding="0" border="1" width="650" style="margin-top:20px; margin-bottom:20px;">
+    <tr>
+        <td id="_suspend1" style="padding:5px;">
+            <div align="center"><b><input type="checkbox" id="_inputUseSus1" value="rel" /><script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_1"));</script><br></b></div>
+            <input type="checkbox" id="_inputSusMon1" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_MON"));</script><br>
+            <input type="checkbox" id="_inputSusTue1" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_TUE"));</script><br>
+            <input type="checkbox" id="_inputSusWed1" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_WED"));</script><br>
+            <input type="checkbox" id="_inputSusThu1" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_THU"));</script><br>
+            <input type="checkbox" id="_inputSusFri1" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_FRI"));</script><br>
+            <input type="checkbox" id="_inputSusSat1" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_SAT"));</script><br>
+            <input type="checkbox" id="_inputSusSun1" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_SUN"));</script><br>
+            <div align="center">
+                <b>
+                <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_START"));</script><br>
+                <select id="_inputSusStartHrs1"></select>:<select id="_inputSusStartMins1"></select><br>
+                <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_END"));</script><br>
+                <select id="_inputSusEndHrs1"></select>:<select id="_inputSusEndMins1"></select>
+                </b>
+            </div>
+        </td>
+        <td id="_suspend2">
+            <div align="center"><b><input type="checkbox" id="_inputUseSus2" value="rel" /><script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_2"));</script><br></b></div>
+            <input type="checkbox" id="_inputSusMon2" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_MON"));</script><br>
+            <input type="checkbox" id="_inputSusTue2" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_TUE"));</script><br>
+            <input type="checkbox" id="_inputSusWed2" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_WED"));</script><br>
+            <input type="checkbox" id="_inputSusThu2" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_THU"));</script><br>
+            <input type="checkbox" id="_inputSusFri2" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_FRI"));</script><br>
+            <input type="checkbox" id="_inputSusSat2" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_SAT"));</script><br>
+            <input type="checkbox" id="_inputSusSun2" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_SUN"));</script><br>
+            <div align="center">
+                <b>
+                <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_START"));</script><br>
+                <select id="_inputSusStartHrs2"></select>:<select id="_inputSusStartMins2"></select><br>
+                <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_END"));</script><br>
+                <select id="_inputSusEndHrs2"></select>:<select id="_inputSusEndMins2"></select>
+                </b>
+            </div>
+        </td>
+        <td id="_suspend3">
+            <div align="center"><b><input type="checkbox" id="_inputUseSus3" value="rel" /><script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_3"));</script><br></b></div>
+            <input type="checkbox" id="_inputSusMon3" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_MON"));</script><br>
+            <input type="checkbox" id="_inputSusTue3" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_TUE"));</script><br>
+            <input type="checkbox" id="_inputSusWed3" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_WED"));</script><br>
+            <input type="checkbox" id="_inputSusThu3" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_THU"));</script><br>
+            <input type="checkbox" id="_inputSusFri3" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_FRI"));</script><br>
+            <input type="checkbox" id="_inputSusSat3" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_SAT"));</script><br>
+            <input type="checkbox" id="_inputSusSun3" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_SUN"));</script><br>
+            <div align="center">
+                <b>
+                <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_START"));</script><br>
+                <select id="_inputSusStartHrs3"></select>:<select id="_inputSusStartMins3"></select><br>
+                <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_END"));</script><br>
+                <select id="_inputSusEndHrs3"></select>:<select id="_inputSusEndMins3"></select>
+                </b>
+            </div>
+        </td>
+        <td id="_suspend4">
+            <div align="center"><b><input type="checkbox" id="_inputUseSus4" value="rel" /><script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_4"));</script><br></b></div>
+            <input type="checkbox" id="_inputSusMon4" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_MON"));</script><br>
+            <input type="checkbox" id="_inputSusTue4" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_TUE"));</script><br>
+            <input type="checkbox" id="_inputSusWed4" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_WED"));</script><br>
+            <input type="checkbox" id="_inputSusThu4" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_THU"));</script><br>
+            <input type="checkbox" id="_inputSusFri4" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_FRI"));</script><br>
+            <input type="checkbox" id="_inputSusSat4" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_SAT"));</script><br>
+            <input type="checkbox" id="_inputSusSun4" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_SUN"));</script><br>
+            <div align="center">
+                <b>
+                <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_START"));</script><br>
+                <select id="_inputSusStartHrs4"></select>:<select id="_inputSusStartMins4"></select><br>
+                <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_END"));</script><br>
+                <select id="_inputSusEndHrs4"></select>:<select id="_inputSusEndMins4"></select>
+                </b>
+            </div>
+        </td>
+        <td id="_suspend5">
+            <div align="center"><b><input type="checkbox" id="_inputUseSus5" value="rel" /><script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_5"));</script><br></b></div>
+            <input type="checkbox" id="_inputSusMon5" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_MON"));</script><br>
+            <input type="checkbox" id="_inputSusTue5" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_TUE"));</script><br>
+            <input type="checkbox" id="_inputSusWed5" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_WED"));</script><br>
+            <input type="checkbox" id="_inputSusThu5" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_THU"));</script><br>
+            <input type="checkbox" id="_inputSusFri5" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_FRI"));</script><br>
+            <input type="checkbox" id="_inputSusSat5" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_SAT"));</script><br>
+            <input type="checkbox" id="_inputSusSun5" value="rel" />
+            <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_SUN"));</script><br>
+            <div align="center">
+                <b>
+                <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_START"));</script><br>
+                <select id="_inputSusStartHrs5"></select>:<select id="_inputSusStartMins5"></select><br>
+                <script>document.writeln(eLang.getString("configure_nodemanager", "STR_CONF_NM_SUS_END"));</script><br>
+                <select id="_inputSusEndHrs5"></select>:<select id="_inputSusEndMins5"></select>
+                </b>
+            </div>
+        </td>
+    </tr>
+</table>
+<br>
+<div class="btnTray" style="width: 400px;">
+    <input type="button" class="classicBtn" id="_saveBtn" />
+    <input type="button" class="classicBtn" id="_deleteBtn" />
+    <input type="button" class="classicBtn" id="_cancelBtn" />
+</div>
+
+</body>
+</html>

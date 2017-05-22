@@ -1,0 +1,44 @@
+<html>
+<head>
+  <script>
+		var cssfile=document.createElement("link");
+		cssfile.setAttribute("rel", "stylesheet");
+		cssfile.setAttribute("type", "text/css");
+		cssfile.setAttribute("href", "../style/"  + top.gLangSetting + "/app_style.css");
+		document.getElementsByTagName("head")[0].appendChild(cssfile);
+  </script>  
+  <title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script src="../lib/ui.js"></script>
+	<script src="../lib/eLang.js"></script>
+	<script>
+		document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/global_str.js\"><\/script>");
+		document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/restart_webserver_str.js\"><\/script>");
+	</script>
+	<script src="../impl/restart_webserver_imp.js"></script>
+
+  
+	<script>
+	onload = function() {
+		if (top.gLangSettingSet == true) {
+		document.title = eLang.getString("restart_webserver", "STR_RESTART_WEB_TITLE");
+			doInit();
+		}
+	}
+	</script>
+</head>
+<body>
+<h3 class="pagetitle"><div class="floatRight" id="wait"></div>
+<script>document.writeln(eLang.getString("restart_webserver", "STR_RESTART_WEB_NOTIFICATION"));</script>
+</h3>
+
+<div class="subSection">
+<strong> 
+<script>document.writeln(eLang.getString("restart_webserver", "STR_RESTART_WEB_DESC1"));</script>
+<br> 
+<script>document.writeln(eLang.getString("restart_webserver", "STR_RESTART_WEB_DESC2"));</script>
+ </strong>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<html>
+  <head>
+ 	<title>IPv6 Network help</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  	<link href='../../style/EN/help_styles.css' rel='stylesheet' type='text/css'/>
+  </head>
+  <body>
+	<div class='closeX'><a href='javascript://' class='closeBtn' onclick='top.frames["header"].closeHelp();'>X</a></div>
+
+	<div class='helpmainhead'>IPv6 Network - Help</div>
+		<p>
+			Use this page to configure the IPv6 network settings for server management.
+		</p>
+        
+	<h2>Enable LAN Failover</h2>
+		<p>
+			Enabling failover bonds all available ethernet interfaces into the first LAN Channel. When the primary interfaces leash is lost one of the secondary interfaces is activated automatically with the same IP address. 	
+		</p>
+	<h2>LAN Channel Number</h2>
+		<p>
+			Lists the LAN Channel(s) available for server management. The LAN channels describe the physical NIC connection on the server. All channels are onboard NICs. The Baseboard Mgmt channel is shared NIC configured for management and shared with the operating system.
+		</p>
+
+	  <h2>MAC Address</h2>
+		<p>The MAC address of the device (read only).</p>
+	  
+	  <h2>Enable IPv6 on this Channel</h2>
+		<p>
+			This check box must be selected to enable any IPv6 network traffic on this channel.
+		</p>
+
+	  <h2>IP Address configuration</h2>
+	  <ul>
+			<li>- IPv6 auto-configuration enables Stateless configuration using ICMPv6 router/neighbor discovery.</li>
+			<li>- Obtain an IP address automatically enables DHCPv6.</li>
+			<li>- Use the following IP address enables static IP assignment.</li>
+	  </ul>
+						
+	  <h2>IP Address</h2>
+		<p>
+			Select the type of IP assignment with the radio buttons. If configuring a static IP, enter the requested IP Address, IPv6 prefix length, and optionally the Gateway in the given fields.
+		</p>
+		<ul>
+			<li>- IPv6 addresses consist of 8 4 digit hexadecimal numbers separated by colons.</li>
+			<li>- A :: can be used for a single sequence of two or more zero fields.</li>
+		</ul>		   
+
+	<div class='helpactionhead'>Actions</div>
+
+	<div class='actionsub'>Save</div>
+		<p>Click 'Save' to save any changes made.</p>
+		
+		<p style="color:red;">
+		  <img src='../../res/ui_icons/warning.png'>
+		  <b>NOTE:</b>
+		  The Dedicated Management NIC IP address must be on a different subnet than the baseboard IP address used for management traffic.
+		</p>
+        <br>
+        <p style="color:red;">
+          <img src='../../res/ui_icons/warning.png'>
+          <b>NOTE:</b>
+          Network settings may not be modified while a remote console redirection session is active. Please close all open remote console redirection sessions before attempting to modify network settings.
+        </p>
+  </body>
+</html>

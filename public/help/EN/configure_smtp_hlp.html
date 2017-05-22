@@ -1,0 +1,36 @@
+<html>
+  <head>
+ 	<title>Alert Email help</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  	<link href='../../style/EN/help_styles.css' rel='stylesheet' type='text/css'/>
+  </head>
+  <body>
+	<div class='closeX'><a href='javascript://' class='closeBtn' onclick='top.frames["header"].closeHelp();'>X</a></div>
+
+	<div class='helpmainhead'>Alert Email - Help</div>
+		<p>Enter the configuration parameters for Alert Emails and click Save.</p>
+
+	<h2>LAN Channel</h2>
+	   <p>Select the LAN Channel to configure. Each channel has its own configuration. If LAN failover mode is enabled, then only one channel will be listed for configuration</p>
+	<h2>SMTP Server IP</h2>
+	   <p>The IP address of the remote SMTP Mailserver that Alert email should be sent to.</p>
+	   <ul>
+	      <li>- IP Address is made of 4 numbers separated by dots as in "xxx.xxx.xxx.xxx".</li>
+		  <li>- 'xxx' ranges from 0 to 255.</li>
+		  <li>- First 'xxx' must not be 0.</li>
+	   </ul>
+	<h2>Sender Address</h2>
+	   <p>The Sender address string to be put in the "From:" field of outgoing Alert emails.</p>
+	<h2>Local Hostname</h2>
+	   <p>The hostname of the local machine that is generating the alert. It is put into the outgoing Alert email.</p>
+	   <ul>
+	      <li>- The Local Hostname is a string of maximum 18 alpha-numeric characters.</li>
+	      <li>- Space, Special Characters are not allowed.</li>
+	   </ul>
+
+	<div class='helpactionhead'>Actions</div>
+
+	<div class='actionsub'>Save</div>
+		<p>Click the 'Save' button to save the new Alert Email configuration.</p>
+  </body>
+</html>

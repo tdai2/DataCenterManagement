@@ -1,0 +1,130 @@
+<html>
+<head>
+   <script>
+        var cssfile=document.createElement("link");
+        cssfile.setAttribute("rel", "stylesheet");
+        cssfile.setAttribute("type", "text/css");
+        cssfile.setAttribute("href", "../style/"  + top.gLangSetting + "/app_style.css");
+        document.getElementsByTagName("head")[0].appendChild(cssfile);
+  </script>
+  <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="../lib/ui.js"></script>
+    <script src="../lib/eLang.js"></script>
+    <script>
+        document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/global_str.js\"><\/script>");
+        document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/sdr_config_str.js\"><\/script>");
+    </script>
+    <script src="../impl/sdr_config_imp.js"></script>
+
+
+  <script src="../lib/eExt.js"></script>
+    <script>
+    onload = function() {
+        if (top.gLangSettingSet == true) {
+            document.title = eLang.getString("sdr_config", "SDR_CONFIG_TITLE");
+            document.getElementById("_uploadBtn").setAttribute("value", eLang.getString("sdr_config", "SDR_CONFIG_UPLOAD"));
+            document.getElementById("_parseBtn").setAttribute("value", eLang.getString("sdr_config", "SDR_CONFIG_PARSE"));
+            document.getElementById("_sendEnableDisableBtn").setAttribute("value", eLang.getString("sdr_config", "SDR_CONFIG_SAVE"));
+            doInit();
+        }
+    }
+    </script>
+</head>
+<body>
+<h3 class="pagetitle"><div class="floatRight" id="wait"></div>
+<script>document.writeln(eLang.getString("sdr_config", "SDR_CONFIG_TITLE"));</script>
+</h3>
+
+<p>
+    <script>document.writeln(eLang.getString("sdr_config", "SDR_CONFIG_DESCRIPTION"));</script>
+</p>
+    <fieldset class="group" style="width: 45%; float:left">
+        <legend class="groupCaption">
+            <script>document.writeln(eLang.getString("sdr_config", "SDR_CONFIG_TITLE"));</script>
+        </legend>
+          <div id="_inputControlsMessage" style="display:none"></div>
+          <div id="_inputControls" style="text-align:left">
+            <form method="POST" name="filesForm" id="_fileForm" enctype="multipart/form-data">
+            <table cellspacing="0" cellpadding="5" border="0" width="450">
+                <tr>
+                    <td>
+                        <strong><script>document.writeln(eLang.getString("sdr_config", "SDR_CONFIG_CURSDR"));</script></strong>
+                    </td>
+                    <td>
+                        <label id="_curSDR"><script>document.writeln(eLang.getString("sdr_config", "SDR_CONFIG_UNKNOWN"));</script></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong><script>document.writeln(eLang.getString("sdr_config", "SDR_CONFIG_CURCFG"));</script></strong>
+                    </td>
+                    <td>
+                        <label id="_curCFG"><script>document.writeln(eLang.getString("sdr_config", "SDR_CONFIG_UNKNOWN"));</script></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong><script>document.writeln(eLang.getString("sdr_config", "SDR_CONFIG_TS"));</script></strong>
+                    </td>
+                    <td>
+                        <label id="_curTS"><script>document.writeln(eLang.getString("sdr_config", "SDR_CONFIG_UNKNOWN"));</script></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <strong><script>document.writeln(eLang.getString("sdr_config", "SDR_CONFIG_NEWFILE"));</script></strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id="_fileSel"></select>
+                    </td>
+                    <td>
+                        <input type="file" name="temp" id="_FileBrowse" style="width:220px;"></strong>
+                    </td>
+                </tr>
+            </table>
+            <table cellspacing="0" cellpadding="5" border="0">
+                <tr>
+                    <td>
+                        <div class="btnTray">
+                            <input type="submit" class="classicBtn" id="_uploadBtn" width="390" />
+                        </div>
+                    </td>
+                    <td>
+                        <div class="btnTray">
+                            <input type="button" class="classicBtn" id="_parseBtn" width="390" />
+                        </div>
+                    </td>
+                </tr>
+            </table>
+          </form>
+      </div>
+    </fieldset>
+    <fieldset class="group" style="width: 45%; float:left">
+        <legend class="groupCaption">
+            <script>document.writeln(eLang.getString("sdr_config", "SDR_CONFIG_TAGS"));</script>
+        </legend>
+            <div id="_tagListDesc" style="text-align:left"></div><table id="_tagTable" style="width:100%"></table>
+    </fieldset>
+    <div id="_enableControl" style="text-align:left; display:none; float:left">
+      <form method="POST" name="filesForm" id="_enableSelect" enctype="multipart/form-data">
+          <table cellspacing="0" cellpadding="5" border="0" width="500">
+              <tr>
+                  <td><strong><script>document.writeln(eLang.getString("sdr_config", "SDR_CONFIG_ENABLEDISABLE"));</script>:</strong></td>
+                  <td>
+                      <input type="radio" name="adminEnableDisable" id="_EnableAutoCfgRadio" value="rel" />
+                      <script>document.writeln(eLang.getString("common", "STR_ENABLE"));</script>
+                  </td>
+                  <td>
+                      <input type="radio" name="adminEnableDisable" id="_DisableAutoCfgRadio" value="rel" />
+                      <script>document.writeln(eLang.getString("common", "STR_DISABLE"));</script>
+                   </td>
+                   <td><input type="button" class="classicBtn" id="_sendEnableDisableBtn" /></td>
+              </tr>
+          </table>
+      </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿<html>
+  <head>
+        <title>System Debug Log Help</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link href='../../style/EN/help_styles.css' rel='stylesheet' type='text/css'/>
+  </head>
+  <body>
+        <div class='closeX'><a href='javascript://' class='closeBtn' onclick='top.frames["header"].closeHelp();'>X</a></div>
+
+        <div class='helpmainhead'>System Debug Log - Help</div>
+                <p>Use this page to collect system debug information about the server.</p>
+
+                <h2>System Debug Log</h2>
+                        <p>The System Debug Log data is used by the system manufacturer for analysis.</p>
+                <h2>Last Log</h2>
+                        <p>Shows the time of the last data collection. Collection times older than three minutes will be marked as an "Old" debug log.</p>
+                <h2>Encryption</h2>
+                        <p>The resulting archive will contain two smaller zip files. These smaller zip files will be encrypted for privacy, and may only be extracted for analysis by an authorized representative of the system manufacturer.</p>
+                        <ul>
+                            <li>SystemDebugLog.zip - Contains Baseboard Management Controller (BMC) status, BMC configuration settings, BMC Sensor readings, Power supply data, System Event Log, sensor readings, SMBIOS tables, CPU machine check registers and PCI configuration space information.</li>
+                            <li>SystemBMCDebugLog.zip - Contains regular System Debug Log plus the BMC debug log.</li>
+                        </ul>
+                <h2>Generate Log</h2>
+                        <p>Click the Generate Log button to collect recent Debug Log data. The resulting compressed archive will be downloaded to your system by clicking on the debug log link. You may also choose to download the data at a later time using the debug log link. Note that it is recommended that fresh data always be downloaded for analysis.</p>
+   </body>
+</html>

@@ -1,0 +1,60 @@
+<html>
+  <head>
+ 	<title>Adding User help</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  	<link href='../../style/EN/help_styles.css' rel='stylesheet' type='text/css'/>
+  </head>
+  <body>
+	<div class='closeX'><a href='javascript://' class='closeBtn' onclick='top.frames["header"].closeHelp();'>X</a></div>
+
+	<div class='helpmainhead'>Adding User - Help</div>
+		<p>
+		    Use this page to add a new user.
+		    The new user will be automatically enabled for LAN access.
+		</p>
+
+	  <h2>User Name</h2>
+		<p>Enter the name of the new user.</p>
+		<ul>
+		   <li>- User Name is a string of 1 to 16 alpha-numeric characters or '_' or '-'.</li>
+		   <li>- User Name must begin with an alphabetic character.</li>
+		</ul>
+		<p>The names below are reserved and may not be used as a User Name.</p>
+		<ul>
+			<li>- anonymous
+			<li>- daemon
+			<li>- games
+			<li>- halt
+			<li>- mail
+			<li>- news
+			<li>- nobody
+			<li>- operator
+			<li>- root
+			<li>- shutdown
+			<li>- sshd
+			<li>- stunnel4
+			<li>- sync
+			<li>- uucp
+		</ul>
+	  <h2>Password, Confirm Password</h2>
+		<p>Enter and confirm the new password here.
+			The password must be between 0 and 20 characters long.
+		</p>
+	  <h2>Network Privilege</h2>
+		<p>The level of network privilege to assign to this user.</p>
+		<ul>
+			<li>- Administrator
+			<li>- Operator
+			<li>- User
+			<li>- Callback
+			<li>- No Access
+		</ul>
+		<a href='./ewsprivilege.html' target="_blank">Click here to get detailed network privilege of each level</a>
+	<div class='helpactionhead'>Actions</div>
+
+	<div class='actionsub'>Add</div>
+		<p>Click the 'Add' button  to save the new user and return to the user list.</p>
+	<div class='actionsub'>Cancel</div>
+		<p>Click on cancel to return to the list without adding the new user.</p>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<html>
+<head>
+  <script>
+		var cssfile=document.createElement("link");
+		cssfile.setAttribute("rel", "stylesheet");
+		cssfile.setAttribute("type", "text/css");
+		cssfile.setAttribute("href", "../style/"  + top.gLangSetting + "/app_style.css");
+		document.getElementsByTagName("head")[0].appendChild(cssfile);
+  </script> 
+  <script type="text/javascript" src="../lib/bitset.js"></script>
+  <script type="text/javascript" src="../lib/eVal.js"></script>
+  <title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script src="../lib/ui.js"></script>
+	<script src="../lib/eLang.js"></script>
+	<script>
+		document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/global_str.js\"><\/script>");
+		document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/configure_login_str.js\"><\/script>");
+	</script>
+	<script src="../impl/configure_login_imp.js"></script>
+
+	
+	
+	<script>
+	onload = function() {
+		if (top.gLangSettingSet == true) {
+		document.title = eLang.getString("configure_login", "CONF_LOGIN_STR_TITLE");
+		var elmt = document.getElementById("_saveBtn");
+		elmt.setAttribute("value", eLang.getString("configure_login", "CONF_LOGIN_STR_SAVE"));
+			doInit();
+		}
+	}
+	</script>
+</head>
+<body>
+<h3 class="pagetitle"><div class="floatRight" id="wait"></div>
+<script>document.writeln(eLang.getString("configure_login", "CONF_LOGIN_PAGE_TITLE"));</script>
+</h3>
+
+<p>
+<script>document.writeln(eLang.getString("configure_login", "CONF_LOGIN_PAGE_DESC"));</script>
+</p>
+
+<div class="subSection">
+<table cellspacing="0" cellpadding="5" border="0" width="500">
+<tr><td>
+<label style="font-weight:bold">
+<script>document.writeln(eLang.getString("configure_login", "CONF_LOGIN_STR_FAILED_ATTEMPTS"));</script>
+</label>
+</td><td>
+<input type="text" id="_failedAttempts" />
+</td></tr>
+<tr><td>
+<label style="font-weight:bold">
+<script>document.writeln(eLang.getString("configure_login", "CONF_LOGIN_STR_LOCKOUT_TIME"));</script>
+</label>
+</td><td>
+<input type="text" id="_lockoutTime" />
+</td></tr>
+<tr><td>
+<label style="font-weight:bold">
+<script>document.writeln(eLang.getString("configure_login", "CONF_LOGIN_STR_FORCE_HTTPS"));</script>
+</label>
+</td><td>
+<input type="checkbox" id="_forceHttps"/>
+<label style="font-weight:bold" for="_forceHttps">
+<script>document.writeln(eLang.getString("configure_login", "CONF_LOGIN_STR_ENABLE"));</script>
+</label>
+</td></tr>
+<tr><td>
+<label style="font-weight:bold">
+<script>document.writeln(eLang.getString("configure_login", "CONF_LOGIN_STR_WEB_TIMEOUT"));</script>
+</label>
+</td><td>
+<input type="text" id="_webSessionTimeout" /><label style="font-weight:bold">
+</label>
+</td></tr>
+</table>
+<br>
+<div class="btnTray" style="width: 360px;"><input type="button" class="classicBtn" id="_saveBtn" /></div>
+</div>
+
+</body>
+</html>

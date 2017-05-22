@@ -1,0 +1,48 @@
+<html>
+  <head>
+ 	<title>安全设置帮助</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=GB2312">
+  	<link href='../../style/CN/help_styles.css' rel='stylesheet' type='text/css'/>
+  </head>
+  <body>
+	<div class='closeX'><a href='javascript://' class='closeBtn' onclick='top.frames["header"].closeHelp();'>X</a></div>
+
+	<div class='helpmainhead'>安全 - 帮助</div>
+		<p>使用这个页面来配置服务器管理的安全设置。</p>
+        
+	<h2>尝试登录失败</h2>
+		<p>
+			设置允许用户被锁定之前失败的登录尝试的数量。零意味着没有锁定。默认值为3次。
+		</p>
+    <h2>用户锁定时间（分钟）</h2>
+        <p>
+            设置用户锁定时间，以分钟为单位。用户被锁定后，经过所设定的时间之后才允许再次登录。零表示没有锁定和解锁所有目前被锁定的用户。默认值是1分钟。
+        </p>
+    <h2>强制使用HTTPS</h2>
+        <p>
+            启用此选项可强制用户使用HTTPS协议的Web用户安全登录。使用证书上传于 '配置 -> SSL'。
+        </p>
+    <h2>Web会话超时</h2>
+        <p>
+            设置最大的Web服务超时时间（以秒为单位）。超时时间应该是60和10800秒之间。默认的超时时间为1800秒。
+        </p>
+    <h2>端口设置</h2>
+        <p>
+            设置Web会话使用的端口，HTTP（默认值：80）和HTTPS（默认值：443）。更改这些设置将导致所有当前Web会话立即终止。
+        </p>
+    <h2>可选的网络服务</h2>
+        <p>
+            可选的网络服务，目前已启用。出于安全原因，未使用的服务可以禁用和关闭相关的网络端口。
+            <ul>
+                <li>- SSH用于SMASH-CLP命令行</li>
+                <li>- HTTP/ HTTPS用于Web控制台</li>
+                <li>- LAN上IPMI是用于RMCP/ RMCP+</li>
+            </ul>
+        </p>
+    <div class='helpactionhead'>操作</div>
+
+    <div class='actionsub'>保存</div>
+        <p>点击“保存”以保存所做的任何更改。</p>
+
+  </body>
+</html>

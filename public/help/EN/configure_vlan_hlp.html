@@ -1,0 +1,46 @@
+<html>
+  <head>
+ 	<title>VLAN Settings help</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  	<link href='../../style/EN/help_styles.css' rel='stylesheet' type='text/css'/>
+  </head>
+  <body>
+	<div class='closeX'><a href='javascript://' class='closeBtn' onclick='top.frames["header"].closeHelp();'>X</a></div>
+
+	<div class='helpmainhead'>VLAN Settings - Help</div>
+		<p>Use this page to configure an 802.1Q VLAN private network on the specified LAN channel.</p>
+        
+	<h2>LAN Channel</h2>
+		<p>
+			It lists the LAN Channel(s) available for server management.
+			The LAN channels describe the physical NIC connection on the server.
+			All channels are onboard NICs.
+			The Baseboard Mgmt channel is shared NIC configured for
+			management and shared with the operating system.
+		</p>
+
+	  <h2>Enable VLAN</h2>
+		<p>
+			Check to enable VLAN on this channel. When enabled, the BMC only accepts
+            packets with the correct VLAN Identifier field. All outgoing packets are
+            marked with that VLAN ID. 
+		</p>
+
+	  <h2>VLAN ID</h2>
+		<p>
+			Specify the VLAN ID to use. Values are from 1 to 4094. Only one ID can be used at a time.
+		</p>
+						
+	  <h2>VLAN Priority</h2>
+		<p>
+			Specify the VLAN Priority field to place in outgoing packets. Values are from
+            0 (best effort) to 7 (highest); 1 represents the lowest priority. 0 is the
+            default.
+		</p>
+
+	<div class='helpactionhead'>Actions</div>
+
+	<div class='actionsub'>Save</div>
+		<p>Click 'Save' to save any changes made.</p>
+  </body>
+</html>

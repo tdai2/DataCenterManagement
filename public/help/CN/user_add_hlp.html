@@ -1,0 +1,59 @@
+<html>
+  <head>
+ 	<title>添加用户帮助</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+  	<link href='../../style/CN/help_styles.css' rel='stylesheet' type='text/css'/>
+  </head>
+  <body>
+	<div class='closeX'><a href='javascript://' class='closeBtn' onclick='top.frames["header"].closeHelp();'>X</a></div>
+
+	<div class='helpmainhead'>添加用户-帮助</div>
+		<p>
+		    本页用来添加一个新用户。
+		    新用户默认启用网络访问权限。
+		</p>
+
+	  <h2>用户名</h2>
+		<p>输入新用户的名字</p>
+		<ul>
+		   <li>- 用户名是一个4到16位由字母、数字、“-”或者“_”组成的字符串。</li>
+		   <li>- 用户名必须由字母开头。</li>
+		</ul>
+		<p>下面的名称是保留字，不能用来作为一个用户名。</p>
+		<ul>
+			<li>- anonymous
+			<li>- daemon
+			<li>- games
+			<li>- halt
+			<li>- mail
+			<li>- news
+			<li>- nobody
+			<li>- operator
+			<li>- root
+			<li>- shutdown
+			<li>- sshd
+			<li>- stunnel4
+			<li>- sync
+			<li>- uucp
+		</ul>
+	  <h2>密码，确认密码</h2>
+		<p>在这里输入并确认新的密码。密码为0到20个字符之间。
+		</p>
+	  <h2>网络权限</h2>
+		<p>给用户分配网络权限。</p>
+		<ul>
+			<li>- Administrator(管理员)
+			<li>- Operator(操作员)
+			<li>- User(用户)
+			<li>- Callback(回调)
+			<li>- No Access(无权限)
+		</ul>
+		<a href='./ewsprivilegecn.html' target="_blank">点此查看各级用户详细权限</a>
+	<div class='helpactionhead'>操作</div>
+
+	<div class='actionsub'>添加</div>
+		<p>点击按钮以保存新用户并返回用户列表。</p>
+	<div class='actionsub'>取消</div>
+		<p>点击按钮以返回用户列表，而不添加新用户。</p>
+  </body>
+</html>

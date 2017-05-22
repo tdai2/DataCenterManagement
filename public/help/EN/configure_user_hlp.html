@@ -1,0 +1,47 @@
+<html>
+  <head>
+ 	<title>User Management help</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  	<link href='../../style/EN/help_styles.css' rel='stylesheet' type='text/css'/>
+  </head>
+  <body>
+	<div class='closeX'><a href='javascript://' class='closeBtn' onclick='top.frames["header"].closeHelp();'>X</a></div>
+
+	<div class='helpmainhead'>User Management - Help</div>
+		<p>The list of configured users, along with their status and network privilege is displayed.</p>
+		<p>Use this page to configure the IPMI users and privileges for this server.</p>
+		
+<!-- 	<p style="color:red;">  -->
+		<p>
+		  <img src='../../res/ui_icons/warning.png'>
+		  <b>NOTE:</b>
+		  UserID 1 (anonymous) may not be renamed or deleted.
+		</p>
+		
+<!-- 	<p style="color:red;">  -->
+		<p>
+		  <img src='../../res/ui_icons/warning.png'>
+		  <b>NOTE:</b>
+		  UserID 2 (root) may not be renamed or deleted; 
+		  nor can the network privileges of UserID 2 be changed.
+		</p>
+		
+<!-- 	<p style="color:red;">  -->
+		<p>
+		  <img src='../../res/ui_icons/warning.png'>
+		  <b>NOTE:</b>
+		  User Names cannot be changed.
+		  To rename a User you must first delete the existing User,
+		  then add the User with the new name.
+		</p>
+
+	<div class='helpactionhead'>Actions</div>
+
+	<div class='actionsub'>Add User</div>
+		<p>Select an empty slot in the list and click to add a new user.</p>
+	<div class='actionsub'>Modify User</div>
+		<p>Select a user in the list and click to modify their settings.</p>
+	<div class='actionsub'>Delete User</div>
+		<p>Select a user in the list and click to delete.</p>
+  </body>
+</html>

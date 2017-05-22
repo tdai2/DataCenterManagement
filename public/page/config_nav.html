@@ -1,0 +1,25 @@
+<html>
+<head>
+  <script>
+		var cssfile=document.createElement("link");
+		cssfile.setAttribute("rel", "stylesheet");
+		cssfile.setAttribute("type", "text/css");
+		cssfile.setAttribute("href", "../style/"  + top.gLangSetting + "/app_style.css");
+		document.getElementsByTagName("head")[0].appendChild(cssfile);
+  </script>  
+  <title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script src="../lib/ui.js"></script>
+	<script src="../lib/eLang.js"></script>
+	<script>
+		document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/global_str.js\"><\/script>");
+		document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/config_nav_str.js\"><\/script>");
+	</script>
+</head>
+<body>
+<h3 class="pagetitle"><div class="floatRight" id="wait"></div><script></script></h3>
+	<p> 
+<script>document.writeln(eLang.getString('common',"STR_USER_PRIVILEGE"));</script>
+ </p>
+</body>
+</html>

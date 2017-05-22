@@ -1,0 +1,62 @@
+﻿<html>
+<head>
+  <script>
+		var cssfile=document.createElement("link");
+		cssfile.setAttribute("rel", "stylesheet");
+		cssfile.setAttribute("type", "text/css");
+		cssfile.setAttribute("href", "../style/"  + top.gLangSetting + "/app_style.css");
+		document.getElementsByTagName("head")[0].appendChild(cssfile);
+  </script>  
+
+  <script src="../lib/bitset.js"></script>
+  <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script src="../lib/ui.js"></script>
+        <script src="../lib/eLang.js"></script>
+        <script>
+                document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/global_str.js\"><\/script>");
+                document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/configure_sollog_str.js\"><\/script>");
+        </script>
+        <script src="../impl/configure_sollog_imp.js"></script>
+        <script src="../lib/eExt.js"></script>
+
+        <script>
+        onload = function() {
+                if (top.gLangSettingSet == true) {
+                    document.title = eLang.getString("sol_log_config", "STR_CFG_SYS_SOL_TITLE");
+					var saveBtn = document.getElementById("_saveBtn");
+                    saveBtn.setAttribute("value", eLang.getString("sol_log_config", "STR_CFG_SYS_SOL_SAVEBTN"));
+				    doInit();
+                }
+        }
+        </script>
+</head>
+<body>
+    <h3 class="pagetitle"><div class="floatRight" id="wait"></div>
+		<script>document.writeln(eLang.getString("sol_log_config", "STR_CFG_SYS_SOL_HEADING"));</script>
+	</h3>
+
+	<p>
+    <script>document.writeln(eLang.getString("sol_log_config", "STR_CFG_SYS_SOL_DESCRIPTION"));</script>
+    </p>
+        
+    <div class="sysInfoBox" align="left">
+        <fieldset class="group">
+            <legend class="groupCaption">
+    			<script>document.writeln(eLang.getString("sol_log_config", "STR_CFG_SYS_SOL_CONFIG"));</script>
+            </legend>
+			<table cellspacing="0" cellpadding="5" border="0" width="600">
+				<tr>
+				<td><label style="font-weight:bold"><script>document.writeln(eLang.getString("sol_log_config", "STR_CFG_SYS_SOL_GLOBAL_ENABLE"));</script></label></td>
+				<td><input type="radio" id="_globalEnable" name="SOLLogGlobalEnable" /><label id="_Enabledtxt"><script>document.writeln(eLang.getString("sol_log_config", "STR_CFG_SYS_SOL_ENABLED_CELL"));</script></label></td>
+				<td><input type="radio" id="_globalDisable" name="SOLLogGlobalEnable" /><label id="_Disabledtxt"><script>document.writeln(eLang.getString("sol_log_config", "STR_CFG_SYS_SOL_DISABLED_CELL"));</script></label></td>
+				</tr>
+		</table>
+				<div class="btnTray" style="width: 360px;">
+					<input type="button" class="classicBtn" id="_saveBtn" />
+				</div>
+        </fieldset>
+    </div>
+
+</body>
+</html>

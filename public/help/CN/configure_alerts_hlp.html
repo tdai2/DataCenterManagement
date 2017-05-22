@@ -1,0 +1,39 @@
+<html>
+  <head>
+ 	<title>报警帮助</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=GB2312">
+  	<link href='../../style/CN/help_styles.css' rel='stylesheet' type='text/css'/>
+  </head>
+  <body>
+	<div class='closeX'><a href='javascript://' class='closeBtn' onclick='top.frames["header"].closeHelp();'>X</a></div>
+
+	<div class='helpmainhead'>报警-帮助</div>
+		<p>当选中的系统事件被触发，会产生一个报警信息（日志信息）并发送给设置的目标地址。每个网络通道可以拥有2个目标地址。</p>
+
+        <h2>全局启用平台事件过滤器</h2>
+            <p>全局启用或禁用平台事件过滤器。如果当前设置的全局过滤器为禁用，报警将不会被发送。这样可阻止报警信息发送，除非用户完整设置了明确的报警策略。</p>
+        <h2>选择事件</h2>
+            <p>选择一或多个可触发报警的系统事件。清除所有禁用报警事件。这些事件和IPMI预配置的平台事件过滤器保持一致。</p>
+        <h2>网络通道</h2>
+            <p>选择和目标地址配置相匹配的网络通道。每个网络通道各自拥有最多2个目标地址。如果启用了网络故障转移(LAN Failover)模式，将只列出一个网络通道用于配置。</p>
+        <h2>报警目标地址设置</h2>
+            <p>报警目标地址可以是以下2种类型之一：
+                <ul style='margin-top:0px; margin-bottom:0px;'>
+                    <li>SNMP Trap</li>
+                    <li>Email (需要设置报警邮件)</li>
+                </ul>
+            </p>
+
+	<div class='helpactionhead'>操作</div>
+
+	<div class='actionsub'>选择所有</div>
+		<p>选择所有事件生成报警。</p>
+	<div class='actionsub'>清除所有</div>
+		<p>不选择事件，将不会有报警产生。</p>
+	<div class='actionsub'>保存</div>
+		<p>点击按钮保存已更改的内容。</p>
+	<div class='actionsub'>发送测试报警</div>
+		<p>测试报警是否能到达目的地，在网络通道一栏中填写期望的通道并设置至少一个目标地址。
+			然后点击“发送测试报警”按钮，通过刚才设置的通道发送一个简单的测试报警给目标地址。</p>
+  </body>
+</html>

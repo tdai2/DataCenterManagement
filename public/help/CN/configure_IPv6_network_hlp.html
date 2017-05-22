@@ -1,0 +1,59 @@
+<html>
+  <head>
+ 	<title>IPv6网络配置帮助</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+  	<link href='../../style/CN/help_styles.css' rel='stylesheet' type='text/css'/>
+  </head>
+  <body>
+	<div class='closeX'><a href='javascript://' class='closeBtn' onclick='top.frames["header"].closeHelp();'>X</a></div>
+
+	<div class='helpmainhead'>IPv6网络配置-帮助</div>
+		<p>本页用于为服务器管理配置IPv6网络。</p>
+        
+	<h2>启用局域网故障转移</h2>
+		<p>
+			启用网络故障转移把所有可用以太网接口绑定到第一个网络通道。当使用中的主以太网接口失效时，自动激活一个次网络接口并保持相同的IP地址。
+		</p>
+
+	<h2>网络通道号</h2>
+		<p>下拉框里列出了服务器管理中可用的网络通道。网络通道描述了物理网卡在服务器上的连接。
+			 所有通道都是板载网卡。該Baseboard Mgmt通道是和操作系统共享的网络接口，配置后用于服务器管理。
+		</p>
+
+	  <h2>MAC地址</h2>
+		<p>设备的MAC地址(只读)。</p>
+	  
+	  <h2>在此通道启用IPv6</h2>
+		<p>
+			此通道启用IPv6的复选框必须处于被选中状态以启用IPv6网络流量。
+		</p>
+
+	  <h2>IP地址配置</h2>
+	  <ul>
+			<li>- IPv6自动配置是使用ICMPv6 路由/邻居发现的方式启用无状态配置。</li>
+			<li>- 启用DHCPv6自动获取IP地址。</li>
+			<li>- 使用如下IP地址，启用静态IP分配方式。</li>
+	  </ul>
+						
+	  <h2>IP地址</h2>
+		<p> 通过单选按钮选择IP分配类型。如果配置静态IP，
+		在相应的区域输入IP地址、子网掩码、网关、DNS服务器等。
+		</p>
+		<ul>
+			<li>- IPv6地址由8个4位16进制数字组成，用冒号隔开。</li>
+			<li>- :: 意为2或多个全为0填充小节组成的连续区域。</li>
+		</ul>		   
+
+	<div class='helpactionhead'>操作</div>
+
+	<div class='actionsub'>保存</div>
+		<p>点击按钮保存已更改内容</p>
+		
+		<p style="color:red;">
+		  <img src='../../res/ui_icons/warning.png'>
+		  <b>提示:</b>
+		  专用管理网卡的IP地址一定不能和用于服务器管理的板载网卡IP地址在同一子网。
+		</p>
+
+  </body>
+</html>

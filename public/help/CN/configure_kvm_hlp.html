@@ -1,0 +1,114 @@
+<html>
+  <head>
+ 	<title>键盘宏配置帮助</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=GB2312">
+  	<link href='../../style/CN/help_styles.css' rel='stylesheet' type='text/css'/>
+  </head>
+  <body>
+	<div class='closeX'><a href='javascript://' class='closeBtn' onclick='top.frames["header"].closeHelp();'>X</a></div>
+
+    <div class='helpmainhead'>KVM & 媒体 设置 - 帮助</div>
+        <p>使用此页面在重定向会话期间启用/禁用KVM或媒体加密。</p>
+    <h2>KVM加密</h2>
+    <p>启用/禁用重定向会话期间KVM数据加密
+选择任何一个支持的加密技术。</p>
+
+    <h2>仅有键盘/鼠标</h2>
+    <p>如果KVM加密设置为“无”，键盘和鼠标数据仍然可以使用Blowfish加密。
+当对最重要的数据进行加密时，此选项对性能的影响最少。</p>
+
+    <h2>媒体加密</h2>
+    <p>启用/禁用重定向会话期间的媒体数据的加密。</p>
+
+    <p>禁用加密可以提高KVM或媒体重定向的性能。</p>
+
+        <h2>USB Key的仿真模式</h2>
+            <p>两种类型的仿真:</p>
+            <ul><li>仿真软驱 - USB Key将被检测为在远程计算机软盘驱动器。</li></ul>
+            <ul><li>仿真硬盘 - USB Key将被检测为远程计算机 的硬盘（或）可移动驱动器。</li></ul>
+
+    <h2>默认的端口设置:</h2>
+        <p>这个部分允许设置KVM和远程媒体使用的端口（标准和安全端口）。不要改变这些值，除非您知道新端口未被占用。</p>
+
+    <div class='helpactionhead'>操作</div>
+    <div class='actionsub'>保存</div>
+        <p>点击“保存”以使用选定的模式。</p>
+
+    <div class='helpmainhead'>鼠标模式 - 帮助</div>
+        <p>从本地Windows到远程屏幕重定向控制台手柄鼠标仿真使用下列方法之一:</p>
+            <ul>
+                <li>绝对模式</li>
+                <li>相对模式</li>
+                <li>其他</li>
+            </ul>
+    <h2>绝对模式</h2>
+        <p>选择发送本地鼠标的绝对位置到服务器。首选的支持方法。
+使用此模式于Windows操作系统和更新版本的Linux。</p>
+    <h2>相对模式</h2>
+        <p>选择相对模式为发送所计算出的相对鼠标位置的位移到服务器。
+		   使用此模式于旧的Linux版本如Red Hat（RHEL）5.x。
+           为了达到最佳效果，服务器和客户端操作系统鼠标加速度/阈值的设置应该匹配。
+           或者设定鼠标校准选项于JViewer。</p>
+    <h2>其他</h2>
+        <p>选择其他模式，计算从本地鼠标位移的中心位置，发送到服务器。
+           在这种模式下，应使用ALT+ C之间切换主机和客户端的鼠标光标。
+           在特殊情况下，比如SLES 11上安装Linux操作系统，请使用此模式。</p>
+
+    <div class='helpactionhead'>操作</div>
+
+    <div class='actionsub'>保存</div>
+        <p>点击“保存”以选定使用模式。</p>
+
+    <div class='helpmainhead'>键盘宏配置 - 帮助</div>
+        <p>使用此页可以配置远程控制台的键盘宏按钮。</p>
+    <h2>按键序列</h2>
+        <p>
+            当宏按钮被按下时，按次序播放按键事件。
+            <ul>
+                <li>'+'表示连接的两个键一起按住</li>
+                <li>'-'表示第二个的键被按下之前，应先释放第一个的键</li>
+                <li>'*'插入一秒钟的暂停于两按键间。注意：视频宏执行过程中不会被更新。</li>
+            </ul>
+        </p>
+        <p>
+            范例:
+            <ul>
+                <li>Ctrl+Alt+Del
+                <li>Ctrl+B-Enter-**Enter</li>
+                <li>Ctrl+B-Enter-*\*-Enter</li>
+            </ul>
+        </p>
+    <h2>按钮名称</h2>
+        <p>
+            可选的短名称出现在远程控制台的按钮。
+            如果空白键序列字符串将被用来作为名称。
+        </p>
+    <h2>按键</h2>
+        <p>
+            按键名称是可打印的字符，如"a", "5", "@"等
+            或者在下面的表中的不可打印键之一。
+            括号中的名称是相同的按键的别名。数字小键盘的键前缀与“NP_”。
+        </p>
+        <p>
+           一个普通的'*'意味着暂停，请使用'\*'表示实际的'*'键。 '\'键也必须以'\\'表示。
+           需要注意的是键序列是以扫描码的方式发送到目标的OS，所以它们将被如数字锁定的Numlock以及OS键盘语言设置所影响。
+        </p>
+        <table border="1">
+            <tr><td><p>Shift (LShift)</p></td><td><p>RShift</p></td><td><p>Ctrl (LCtrl)</p></td><td><p>RCtrl</p></td></tr>
+            <tr><td><p>Alt (LAlt)</p></td><td><p>RAlt (AltGr)</p></td><td><p>Win (LWin)</p></td><td><p>RWin</p></td></tr>
+            <tr><td><p>Enter</p></td><td><p>Esc</p></td><td><p>F1 - F12</p></td><td><p></p></td></tr>
+            <tr><td><p>Bksp</p></td><td><p>Tab</p></td><td><p>CapsLk</p></td><td><p>Space</p></td></tr>
+            <tr><td><p>Ins</p></td><td><p>Del</p></td><td><p>Home</p></td><td><p>End</p></td></tr>
+            <tr><td><p>PgUp</p></td><td><p>PgDn</p></td><td><p>Context (Menu)</p></td><td><p></p></td></tr>
+            <tr><td><p>Up</p></td><td><p>Left</p></td><td><p>Down</p></td><td><p>Right</p></td></tr>
+            <tr><td><p>NumLk</p></td><td><p>NP_Div</p></td><td><p>NP_Mult</p></td><td><p>NP_Minus</p></td></tr>
+            <tr><td><p>NP_Plus</p></td><td><p>NP_0 - NP_9</p></td><td><p>NP_Dec</p></td><td><p>NP_Enter</p></td></tr>
+            <tr><td><p>PrtSc (SysRq)</p></td><td><p>ScrLk</p></td><td><p>Pause (Break)</p></td><td><p></p></td></tr>
+        </table>
+    <div class='helpactionhead'>操作</div>
+
+    <div class='actionsub'>保存</div>
+        <p>点击“保存”以保存所做的任何更改。</p>
+
+  </body>
+</html>

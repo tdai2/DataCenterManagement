@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+  <script>
+		var cssfile=document.createElement("link");
+		cssfile.setAttribute("rel", "stylesheet");
+		cssfile.setAttribute("type", "text/css");
+		cssfile.setAttribute("href", "../style/"  + top.gLangSetting + "/app_style.css");
+		document.getElementsByTagName("head")[0].appendChild(cssfile);
+  </script>  
+  <script type="text/javascript" src="../lib/bitset.js"></script>
+  <script type="text/javascript" src="../lib/eVal.js"></script>
+  <title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script src="../lib/ui.js"></script>
+	<script src="../lib/eLang.js"></script>
+	<script>
+		document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/global_str.js\"><\/script>");
+		document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/configure_alerts_str.js\"><\/script>");
+	</script>
+	<script src="../impl/configure_alerts_imp.js"></script>
+
+
+  
+	<script>
+	onload = function() {
+		if (top.gLangSettingSet == true) {
+		document.title = eLang.getString("configure_alerts", "STR_CONF_ALERT_TITLE");
+		var elmt = document.getElementById("_checkAllBtn");
+		elmt.setAttribute("value", eLang.getString("configure_alerts", "STR_CONF_ALERT_CHECK_ALL"));
+		var elmt = document.getElementById("_clearAllBtn");
+		elmt.setAttribute("value", eLang.getString("configure_alerts", "STR_CONF_ALERT_CLEAR_ALL"));
+		var elmt = document.getElementById("_saveBtn");
+		elmt.setAttribute("value", eLang.getString("configure_alerts", "STR_CONF_ALERT_SAVE"));
+		var elmt = document.getElementById("_testBtn");
+		elmt.setAttribute("value", eLang.getString("configure_alerts", "STR_CONF_ALERT_TEST"));
+			doInit();
+		}
+	}
+	</script>
+</head>
+<body>
+<h3 class="pagetitle"><div class="floatRight" id="wait"></div>
+<script>document.writeln(eLang.getString("configure_alerts", "STR_CONF_ALERT_PAGE_TITLE"));</script>
+</h3>
+
+<p>
+<script>document.writeln(eLang.getString("configure_alerts", "STR_CONF_ALERT_PAGE_DESC"));</script>
+</p>
+
+<br/>
+<table cellspacing="0" cellpadding="0" border="0" width="500">
+    <tr>
+        <td><label style="font-weight:bold"><script>document.writeln(eLang.getString("configure_alerts", "STR_CONF_ALERT_GLOBAL_ENABLE"));</script></label></td>
+        <td><input type="radio" id="_globalEnable" name="PEFGlobalEnable" /><label id="_Enabledtxt"><script>document.writeln(eLang.getString("configure_alerts", "STR_CONF_ALERT_GLOBAL_ENABLE_ENABLED"));</script></label></td>
+        <td><input type="radio" id="_globalDisable" name="PEFGlobalEnable" /><label id="_Disabledtxt"><script>document.writeln(eLang.getString("configure_alerts", "STR_CONF_ALERT_GLOBAL_ENABLE_DISABLED"));</script></label></td>
+    </tr>
+    <tr>
+        <td><label style="font-weight:bold"><script>document.writeln(eLang.getString("configure_alerts", "STR_CONF_ALERT_LOG_EVENT_ENABLE"));</script></label></td>
+        <td><input type="radio" id="_eventLogEnable" name="PEFLogEventEnable" /><script>document.writeln(eLang.getString("configure_alerts", "STR_CONF_ALERT_GLOBAL_ENABLE_ENABLED"));</script></td>
+        <td><input type="radio" id="_eventLogDisable" name="PEFLogEventEnable" /><script>document.writeln(eLang.getString("configure_alerts", "STR_CONF_ALERT_GLOBAL_ENABLE_DISABLED"));</script></td>
+    </tr>
+</table>
+
+<br/>
+<label style="font-weight:bold">
+<script>document.writeln(eLang.getString("configure_alerts", "STR_CONF_ALERT_EVENTS"));</script>
+</label>
+
+<br/>
+<table cellspacing="0" cellpadding="0" border="0" width="600">
+    <tr>
+        <td> <input type="checkbox" id="_tempEvent" value="1" /> 
+            <script>document.writeln(eLang.getString("configure_alerts", "STR_CONF_ALERT_TEMP_EVENT"));</script>
+        </td><td> <input type="checkbox" id="_watchdogEvent" value="1" /> 
+            <script>document.writeln(eLang.getString("configure_alerts", "STR_CONF_ALERT_WATCHDOG_EVENT"));</script>
+        </td>
+    </tr><tr>
+        <td> <input type="checkbox" id="_restartEvent" value="1" /> 
+            <script>document.writeln(eLang.getString("configure_alerts", "STR_CONF_ALERT_RESTART_EVENT"));</script>
+        </td><td> <input type="checkbox" id="_voltageEvent" value="1" /> 
+            <script>document.writeln(eLang.getString("configure_alerts", "STR_CONF_ALERT_VOLTAGE_EVENT"));</script>
+        </td>
+    </tr><tr>
+        <td> <input type="checkbox" id="_fanEvent" value="1" /> 
+            <script>document.writeln(eLang.getString("configure_alerts", "STR_CONF_ALERT_FAN_EVENT"));</script>
+        </td><td> <input type="checkbox" id="_intrusionEvent" value="1" /> 
+            <script>document.writeln(eLang.getString("configure_alerts", "STR_CONF_ALERT_INTRUSION_EVENT"));</script>
+        </td>
+    </tr><tr>
+        <td> <input type="checkbox" id="_powersupplyEvent" value="1" /> 
+            <script>document.writeln(eLang.getString("configure_alerts", "STR_CONF_ALERT_POWERSUPPLY_EVENT"));</script>
+        </td><td> <input type="checkbox" id="_memoryEvent" value="1" /> 
+            <script>document.writeln(eLang.getString("configure_alerts", "STR_CONF_ALERT_MEMORY_EVENT"));</script>
+        </td>
+    </tr><tr>
+        <td> <input type="checkbox" id="_postEvent" value="1" /> 
+            <script>document.writeln(eLang.getString("configure_alerts", "STR_CONF_ALERT_POST_EVENT"));</script>
+        </td><td> <input type="checkbox" id="_frbEvent" value="1" /> 
+            <script>document.writeln(eLang.getString("configure_alerts", "STR_CONF_ALERT_FRB_EVENT"));</script>
+        </td>
+    </tr>
+    </tr><tr>
+        <td> <input type="checkbox" id="_nodemanagerEvent" value="1" /> 
+            <script>document.writeln(eLang.getString("configure_alerts", "STR_CONF_ALERT_NODEMANAGER_EVENT"));</script>
+        </td><td> <input type="checkbox" id="_harddriveEvent" value="1" /> 
+            <script>document.writeln(eLang.getString("configure_alerts", "STR_CONF_ALERT_HARDDRIVE_EVENT"));</script>
+        </td>
+    </tr>
+</table>
+<div class="btnTray">
+    <input type="button" class="classicBtn" id="_checkAllBtn" />
+    <input type="button" class="classicBtn" id="_clearAllBtn" />
+</div>
+
+<br/>
+
+<label style="font-weight:bold">
+<script>document.writeln(eLang.getString("configure_alerts", "STR_CONF_ALERT_LANCHAN"));</script>
+</label>
+<select id="_lanchannel"></select>
+
+<br/>
+<br/>
+
+<label style="font-weight:bold">
+    <script>document.writeln(eLang.getString("configure_alerts", "STR_CONF_ALERT_DEST1"));</script>
+</label>
+
+<table cellspacing="0" cellpadding="0" border="0" width="450">
+    <tr>
+        <td style="width: 125px;"> <input type="radio" name="alertDest1" id="_snmpEnable1" value="abs" />
+            <script>document.writeln(eLang.getString("configure_alerts", "STR_CONF_ALERT_DEST_SNMP"));</script>
+        </td><td> <script>document.writeln(eLang.getString("configure_alerts", "STR_CONF_ALERT_DEST_SNMP_IP"));</script>
+        </td><td> <input type="text" id="_snmpAddress1" />
+        </td>
+    </tr><tr>
+ 		<td style="width: 125px;"> <input type="radio" name="alertDest1" id="_emailEnable1" value="rel" />
+            <script>document.writeln(eLang.getString("configure_alerts", "STR_CONF_ALERT_DEST_EMAIL"));</script>
+        </td><td> <script>document.writeln(eLang.getString("configure_alerts", "STR_CONF_ALERT_DEST_EMAIL_TO"));</script>
+        </td><td> <input type="text" id="_emailAddress1" maxlength="63" />
+        </td>
+ 	</tr>
+</table>
+
+<br/>
+<label style="font-weight:bold">
+    <script>document.writeln(eLang.getString("configure_alerts", "STR_CONF_ALERT_DEST2"));</script>
+</label>
+
+<table cellspacing="0" cellpadding="0" border="0" width="450">
+    <tr>
+        <td style="width: 125px;"> <input type="radio" name="alertDest2" id="_snmpEnable2" value="abs" />
+            <script>document.writeln(eLang.getString("configure_alerts", "STR_CONF_ALERT_DEST_SNMP"));</script>
+        </td><td> <script>document.writeln(eLang.getString("configure_alerts", "STR_CONF_ALERT_DEST_SNMP_IP"));</script>
+        </td><td> <input type="text" id="_snmpAddress2" />
+        </td>
+    </tr><tr>
+ 		<td style="width: 125px;"> <input type="radio" name="alertDest2" id="_emailEnable2" value="rel" />
+            <script>document.writeln(eLang.getString("configure_alerts", "STR_CONF_ALERT_DEST_EMAIL"));</script>
+        </td><td> <script>document.writeln(eLang.getString("configure_alerts", "STR_CONF_ALERT_DEST_EMAIL_TO"));</script>
+        </td><td> <input type="text" id="_emailAddress2" maxlength="63" />
+        </td>
+ 	</tr>
+</table>
+
+<br/>
+<div class="btnTray" style="width: 360px;">
+	<input type="button" class="classicBtn" id="_saveBtn" />
+	<input type="button" class="classicBtn" id="_testBtn" />
+</div>
+
+</body>
+</html>

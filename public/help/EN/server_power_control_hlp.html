@@ -1,0 +1,38 @@
+<html>
+  <head>
+ 	<title>Server Power Control help</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  	<link href='../../style/EN/help_styles.css' rel='stylesheet' type='text/css'/>
+  </head>
+  <body>
+	<div class='closeX'><a href='javascript://' class='closeBtn' onclick='top.frames["header"].closeHelp();'>X</a></div>
+
+	<div class='helpmainhead'>Server Power Control - Help</div>
+		<p>This page shows the power status of the server.</p>
+		<p>The following power control operations can be performed:</p>
+	  <h2>Reset Server</h2>
+		<p>Selecting this option will hard reset the host without powering off.</p>
+	  <h2>Force-enter BIOS Setup</h2>
+		<p>Check this option to enter into the BIOS setup after resetting the server.</p>
+	  <h2>Power Off Server</h2>
+		<p>Selecting this option will immediately power off the host.</p>
+	  <h2>Graceful Shutdown</h2>
+		<p>Selecting this option will soft power off the host.</p>
+	  <h2>Power On Server</h2>
+		<p>Selecting this option will power on the host.</p>
+	  <h2>Power Cycle Server</h2>
+		<p>Selecting this option will immediately power off the host, 
+		   then power it back on after one second.
+		</p>
+		<p>
+			All power control actions are done through the BMC and are immediate actions.
+			It is suggested to gracefully shut down the operating system via the KVM interface
+			or other interface before initiating power actions.
+		</p>
+
+	<div class='helpactionhead'>Actions</div>
+
+	<div class='actionsub'>Perform Action</div>
+		<p>Click to execute the selected remote power command.</p>
+  </body>
+</html>

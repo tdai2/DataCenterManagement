@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+		<script>
+		var cssfile=document.createElement("link");
+		cssfile.setAttribute("rel", "stylesheet");
+		cssfile.setAttribute("type", "text/css");
+		cssfile.setAttribute("href", "../style/"  + top.gLangSetting + "/vfp_style.css");
+		document.getElementsByTagName("head")[0].appendChild(cssfile);
+		</script>  
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<!--<meta http-equiv="refresh" content="40"> -->
+	<script type="text/javascript" src="../lib/ui.js"></script>
+	<script type="text/javascript" src="../lib/eLang.js"></script>
+
+	<script>
+		document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/global_str.js\"><\/script>");
+		document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/server_power_control_str.js\"><\/script>");
+	</script>
+	<script src="../impl/ffront_imp.js"></script>
+	<script>
+	onload = function()	  {
+		if (top.gLangSettingSet == true) {
+		document.title = eLang.getString("server_power_control", "STR_SRVR_LEDST_TITLE");
+		doInit();
+
+	 	IDBtn.disabled = false;
+
+		   }
+	      }
+	</script>
+	</head>
+	<body class="hw-pg rear-view">
+	<h3 class="pagetitle"><div class="floatRight" id="wait"></div>
+		<!-- /.end aside -->
+		<div class="content">
+
+			<table id="main-content">
+				<tbody>
+				<tr>
+					<td >
+						<div class="col col-1of2 r-view">
+							<div class="server-i-wrap">
+
+								<img src="/res/vfp_background.jpg" alt="Virtual Front Panel" width="590" height="170" />
+
+								<div class="comp-sect comp-sect-3" id="_StatusledDiv">
+									<table class="comp-ov-tb">
+										<tr>
+											<td class="comp comp-1">
+												<a>
+												<div  id="_StatusledDiv1">
+													<img class="comp-alert-i statusled" src="/res/grey.png" id= "_Statusled" />
+												</div>
+												</a>
+											</td>
+										</tr>
+									</table>
+								</div>	<!-- /.comp-sect-1 -->
+
+								<div class="comp-sect comp-sect-3">
+									<table class="comp-ov-tb">
+										<tr>
+										<td class="comp comp-1">
+											<a>
+											<img class="comp-alert-i statusled" src="/res/status_txt.png" />
+											</a>
+										</td>
+									</tr>
+									</table>
+								</div>	<!-- /.comp-sect-1 -->
+
+								<div class="comp-sect comp-sect-2">
+									<table class="comp-ov-tb">
+										<tr>
+											<td class="comp comp-1">
+											<a href="#" >
+											<img class="comp-alert-i vfpbutton" src="/res/power_btn.png" id= "_ResetBtn1"/>
+											</a>
+											</td>
+										</tr>
+									</table>
+								</div>	<!-- /.comp-sect-2 -->
+
+								<div class="comp-sect comp-sect-1"  id="_PowerledDiv">
+									<table class="comp-ov-tb">
+										<tr>
+											<td class="comp comp-1">
+												<a>
+												<div  id="_PowerledDiv1">
+													<img class="comp-alert-i statusled" src="/res/grey.png" id= "_Power"/>
+												</div>
+												</a>
+											</td>
+										</tr>
+									</table>
+								</div>	<!-- /.comp-sect-3 -->
+
+								<div class="comp-sect comp-sect-1">
+																	<table class="comp-ov-tb">
+																		<tr>
+																		<td class="comp comp-1">
+																			<a>
+																			<img class="comp-alert-i statusled" src="/res/power_txt.png"/>
+																			</a>
+																		</td>
+																	</tr>
+																	</table>
+								</div>	<!-- /.comp-sect-3 -->
+
+									<div class="comp-sect comp-sect-4">
+									<table class="comp-ov-tb">
+										<tr>
+											<td class="comp comp-1">
+											<a href="#">
+												<img class="comp-alert-i vfpbutton" src="/res/reset_btn.png" id= "_ResetBtn"/>
+											</a>
+											</td>
+										</tr>
+									</table>
+								</div>	<!-- /.comp-sect-4 -->
+
+								<div class="comp-sect comp-sect-5" id="_IDledDiv">
+									<table class="comp-ov-tb">
+										<tr>
+											<td class="comp comp-1">
+
+												<a >
+												<div id="_IDledDiv1">
+													<img class="comp-alert-i statusled" input type="image"  src="/res/grey.png" id="_IDLed" />
+
+													</div>
+												</a>
+
+											</td>
+										</tr>
+									</table>
+								</div>	<!-- /.comp-sect-5 -->
+
+								<div class="comp-sect comp-sect-5">
+																	<table class="comp-ov-tb">
+																		<tr>
+																		<td class="comp comp-1">
+																			<a>
+										<img class="comp-alert-i statusled" src="/res/id_txt.png" />
+																			</a>
+																		</td>
+																	</tr>
+																	</table>
+								</div>	<!-- /.comp-sect-1 -->
+
+									<div class="comp-sect comp-sect-6">
+									<table class="comp-ov-tb">
+										<tr>
+											<td class="comp comp-1">
+												<a href="#" >
+													<img class="comp-alert-i vfpbutton" src="/res/id_btn.png" id= "_IDBtn"/>
+												</a>
+											</td>
+										</tr>
+									</table>
+								</div>	<!-- /.comp-sect-6 -->
+
+
+							   <div class="comp-sect comp-sect-14">
+									<table class="comp-ov-tb">
+										<tr>
+										<div class="comp comp-1">
+										<b><blink><span  id="_Message" ></span></blink></b>
+										</div>
+										</tr>
+									</table>
+								</div>	<!-- /.comp-sect-14 -->
+
+							</div>
+						</div>	<!-- /.end col1of2 -->
+					</td>
+
+			</tr>
+			</tbody>
+			</table>
+			<!-- /.end Notify Bar -->
+		</div>	<!-- /.end Content -->
+		<!-- /.end Siteinfo -->
+	</body>
+</html>

@@ -1,0 +1,46 @@
+<html>
+  <head>
+ 	<title>IPv4网络配置帮助</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=GB2312">
+  	<link href='../../style/CN/help_styles.css' rel='stylesheet' type='text/css'/>
+  </head>
+  <body>
+	<div class='closeX'><a href='javascript://' class='closeBtn' onclick='top.frames["header"].closeHelp();'>X</a></div>
+
+	<div class='helpmainhead'>IPv4网络配置-帮助</div>
+		<p>本页用于为服务器管理配置IPv4网络。</p>
+        
+	<h2>启用网络故障转移(LAN Failover)</h2>
+		<p>
+			启用网络故障转移把所有可用以太网接口绑定到第一个网络通道。当使用中的主以太网接口失效时，自动激活绑定到该网络通道的下一个网络接口并保持相同的IP地址。
+		</p>
+
+	<h2>网络通道号</h2>
+		<p>下拉框里列出了服务器管理适用的网络通道。网络通道描述了物理网卡在服务器上的连接。
+			 所有通道都是板载网卡。該Baseboard Mgmt通道是和操作系统共享的网络接口，配置后用于服务器管理。
+		</p>
+
+	  <h2>MAC地址</h2>
+		<p>设备的MAC地址(只读).</p>
+	  <h2>IP地址</h2>
+		<p> 通过单选按钮选择IP分配类型。
+		如果配置一个静态IP，在相应的区域输入IP地址、子网掩码、网关、DNS服务器等。</p>
+		<ul>
+			<li>- IP地址由4组数字组成，以点分开，类似"xxx.xxx.xxx.xxx"。</li>
+			<li>- “xxx”范围为0~255。</li>
+			<li>- 第一组“xxx”不能为0。</li>
+		</ul>		   
+
+	<div class='helpactionhead'>操作</div>
+
+	<div class='actionsub'>保存</div>
+		<p>单击“保存”按钮以保存修改的设置</p>
+		
+		<p style="color:red;">
+		  <img src='../../res/ui_icons/warning.png'>
+		  <b>提示:</b>
+		  专用管理网卡的IP地址一定不能和用于服务器管理的板载网卡IP地址在同一子网。
+		</p>
+
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<html>
+<head>
+  <script>
+		var cssfile=document.createElement("link");
+		cssfile.setAttribute("rel", "stylesheet");
+		cssfile.setAttribute("type", "text/css");
+		cssfile.setAttribute("href", "../style/"  + top.gLangSetting + "/app_style.css");
+		document.getElementsByTagName("head")[0].appendChild(cssfile);
+  </script>  
+  <script type="text/javascript" src="../lib/bitset.js"></script>
+  <script type="text/javascript" src="../lib/eVal.js"></script>
+  <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="../lib/ui.js"></script>
+    <script src="../lib/eLang.js"></script>
+    <script>
+        document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/global_str.js\"><\/script>");
+        document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/configure_vlan_str.js\"><\/script>");
+    </script>
+    <script src="../impl/configure_vlan.js"></script>
+    
+    <script>
+    onload = function()
+    {
+        if (top.gLangSettingSet == true) {
+            document.title = eLang.getString("configure_vlan", "STR_CONF_VLAN_TITLE");
+            var elmt = document.getElementById("_save");
+            elmt.setAttribute("value", eLang.getString("configure_vlan", "STR_CONF_VLAN_SAVE"));
+            doInit();
+        }
+    }
+    </script>
+</head>
+<body>
+<h3 class="pagetitle"><div class="floatRight" id="wait"></div>
+<script>document.writeln(eLang.getString("configure_vlan", "STR_CONF_VLAN_HEADING"));</script>
+</h3>
+
+<p>
+<script>document.writeln(eLang.getString("configure_vlan", "STR_CONF_VLAN_DESCRIPTION"));</script>
+</p>
+
+<div class="subSection">
+<table cellspacing="0" cellpadding="5" border="0" width="450">
+
+<tr><td>
+<strong>
+<script>document.writeln(eLang.getString("configure_vlan", "STR_CONF_VLAN_LANCHAN"));</script>
+</strong>
+</td><td>
+<select id="_lanChannel"></select>
+</td></tr>
+
+<tr><td colspan="2">
+<input type="checkbox" id="_vlanEnable" value="1" /> 
+<strong>
+<script>document.writeln(eLang.getString("configure_vlan", "STR_CONF_VLAN_ENABLE"));</script>
+</strong>
+</td></tr>
+
+<tr><td><strong>
+<script>document.writeln(eLang.getString("configure_vlan", "STR_CONF_VLAN_ID"));</script>
+</strong></td>
+<td><input type="text" id="_vlanId" size=4 /></td> 
+
+<tr><td><strong>
+<script>document.writeln(eLang.getString("configure_vlan", "STR_CONF_VLAN_PRIORITY"));</script>
+</strong></td>
+<td><input type="text" id="_vlanPriority" size=1 /></td> 
+
+</table>
+ </div>
+ 
+<div class="btnTray" style="width: 360px;">
+<input type="button" class="classicBtn" id="_save" />
+</div>
+</body>
+</html>

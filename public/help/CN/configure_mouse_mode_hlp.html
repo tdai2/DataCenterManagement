@@ -1,0 +1,32 @@
+<html>
+  <head>
+ 	<title>鼠标模式帮助</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=GB2312">
+  	<link href='../../style/CN/help_styles.css' rel='stylesheet' type='text/css'/>
+  </head>
+  <body>
+	<div class='closeX'><a href='javascript://' class='closeBtn' onclick='top.frames["header"].closeHelp();'>X</a></div>
+
+	<div class='helpmainhead'>鼠标模式-帮助</div>
+		<p>通过选取下面的一种模式，重定向从本地窗口到远程屏幕的鼠标模拟控制：</p>
+			<ul>
+				<li>绝对模式</li>
+				<li>相对模式</li>
+				<li>其它模式</li>
+			</ul>
+	  <h2>绝对模式</h2>
+		<p> 绝对模式是把本地鼠标的绝对坐标发送到服务器。Windows系统和新版本的Red Hat使用此模式(RHEL 6.x)。
+		</p>
+	  <h2>相对模式</h2>
+		<p> 相对模式是计算鼠标的相对坐标位置偏移，然后发送给服务器。 此模式用于其它Linux系统比如SUSE(SLES)或者老版本的Red Hat（RHEL 5.x）使用此模式。
+			  为了最佳效果，服务器操作系统的鼠标加速度/阈值设置可以减少，或者在JViewer运行时校准鼠标。</p>
+	  <h2>其它模式</h2>
+		<p>其它模式是计算本地鼠标在中心位置的偏移，然后发送给服务器。在此模式下，ALT+C用来切换在主机和客户端的鼠标之间的光标。
+			 SLES 11 Linux系统安装过程使用此模式。</p>
+
+	<div class='helpactionhead'>操作</div>
+
+	<div class='actionsub'>保存</div>
+		<p>点击按钮使用已选中的模式。</p>
+  </body>
+</html>

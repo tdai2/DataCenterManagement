@@ -90,18 +90,18 @@ top.gLangSettingSet=true;
 -->
     <div class="loginBox">
          <div class="lbFields">
-              <form action="javascript://" autocomplete="off">
+              <form action="login" method = 'post'>
                     <p id="msglbl">
 <script>document.writeln(eLang.getString("login", "STR_LOGIN_PLS_LOGIN"));</script>
 </p>
                     <label class="loginlabel">
 <script>document.writeln(eLang.getString("login", "STR_LOGIN_USERNAME"));</script>
- </label><input id="login_username" name="T1" size="20" style="width:146px;" tabindex="1" type="text"><br><br>
+ </label><input id="login_username" name="uId" size="20" style="width:146px;" tabindex="1" type="text"><br><br>
                     <label class="loginlabel">
 <script>document.writeln(eLang.getString("login", "STR_LOGIN_PASSWORD"));</script>
- </label><input id="login_password" name="T2" size="20" style="width:146px;" tabindex="2" type="password"><br><br>
+ </label><input id="login_password" name="upassword" size="20" style="width:146px;" tabindex="2" type="password"><br><br>
  <!--                   <input id="LOGIN_VALUE_1" class="button" name="Login" onMouseDown="DoLogin();" type="button">-->
-                    <input id="LOGIN_VALUE_1" class="button" name="Login" type="button">
+                    <input id="LOGIN_VALUE_1" class="button" name="Login" type="submit"> 
               </form>
          </div> 
    

@@ -1,0 +1,60 @@
+<html>
+  <head>
+ 	<title>自定义组合键帮助</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+  	<link href='../../style/CN/help_styles.css' rel='stylesheet' type='text/css'/>
+  </head>
+  <body>
+	<div class='closeX'><a href='javascript://' class='closeBtn' onclick='top.frames["header"].closeHelp();'>X</a></div>
+
+	<div class='helpmainhead'>自定义组合键-帮助</div>
+		<p>本页用于配置KVM远程控制台中使用的自定义组合键</p>
+	<h2>按键序列</h2>
+		<p>
+			当组合键按钮按下时，相当于事先定义的键盘按键序列回放
+			<ul>
+				<li>'+'号在按键之间表明这些按键需要一起被按下。</li>
+				<li>'-'号在按键之间表明前面的按键应该在新按键按下前释放。</li>
+				<li>'*'号在按键序列中表明插入一个1秒的暂停。 注意: 在自定义组合键执行时视频不更新。</li>
+			</ul>
+		</p>
+		<p>
+			例如:
+			<ul>
+				<li>Ctrl+Alt+Del
+				<li>Ctrl+B-Enter-**Enter</li>
+				<li>Ctrl+B-Enter-*\*-Enter</li>
+			</ul>
+		</p>
+	<h2>按键名称</h2>
+		<p>
+			显示在远程控制台按键上的命名是可选项。如果空白，则键序字符串将作为名称使用。
+		</p>
+	<h2>按键</h2>
+		<p>
+			按键名字可以是“a”、“5”、“@”这样的可打印的字符，也可以是下表中的不可打印字符。
+			名字在括号中的别名可以是同一按键。数字键盘按键使用前缀“NP_”。
+		</p>
+		<p>
+			一个“*”表示暂停, 用'\*'表示实际的“*”号键. '\'键也必须转义为'\\'。
+			值得注意的是，发送给目标的键序是扫描码，扫描码通过目标操作系统解释起效，所以键序可能会受到如Numlock或者操作系统键盘语言设置等影响。
+		</p>
+		<table border="1">
+			<tr><td><p>Shift (LShift)</p></td><td><p>RShift</p></td><td><p>Ctrl (LCtrl)</p></td><td><p>RCtrl</p></td></tr>
+			<tr><td><p>Alt (LAlt)</p></td><td><p>RAlt (AltGr)</p></td><td><p>Win (LWin)</p></td><td><p>RWin</p></td></tr>
+			<tr><td><p>Enter</p></td><td><p>Esc</p></td><td><p>F1 - F12</p></td><td><p></p></td></tr>
+			<tr><td><p>Bksp</p></td><td><p>Tab</p></td><td><p>CapsLk</p></td><td><p>Space</p></td></tr>
+			<tr><td><p>Ins</p></td><td><p>Del</p></td><td><p>Home</p></td><td><p>End</p></td></tr>
+			<tr><td><p>PgUp</p></td><td><p>PgDn</p></td><td><p>Context (Menu)</p></td><td><p></p></td></tr>
+			<tr><td><p>Up</p></td><td><p>Left</p></td><td><p>Down</p></td><td><p>Right</p></td></tr>
+			<tr><td><p>NumLk</p></td><td><p>NP_Div</p></td><td><p>NP_Mult</p></td><td><p>NP_Minus</p></td></tr>
+			<tr><td><p>NP_Plus</p></td><td><p>NP_0 - NP_9</p></td><td><p>NP_Dec</p></td><td><p>NP_Enter</p></td></tr>
+			<tr><td><p>PrtSc (SysRq)</p></td><td><p>ScrLk</p></td><td><p>Pause (Break)</p></td><td><p></p></td></tr>
+		</table>
+	<div class='helpactionhead'>操作</div>
+
+	<div class='actionsub'>保存</div>
+		<p>点击按钮保存已更改的内容</p>
+
+  </body>
+</html>

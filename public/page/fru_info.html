@@ -1,0 +1,168 @@
+<html>
+<head>
+  <script>
+		var cssfile=document.createElement("link");
+		cssfile.setAttribute("rel", "stylesheet");
+		cssfile.setAttribute("type", "text/css");
+		cssfile.setAttribute("href", "../style/"  + top.gLangSetting + "/app_style.css");
+		document.getElementsByTagName("head")[0].appendChild(cssfile);
+  </script>  
+  <script src="../lib/bitset.js"></script>
+  <title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script src="../lib/ui.js"></script>
+	<script src="../lib/eLang.js"></script>
+	<script>
+		document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/global_str.js\"><\/script>");
+		document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/fru_info_str.js\"><\/script>");
+	</script>
+	<script src="../impl/fru_info_imp.js"></script>
+
+	<script>
+	onload = function() {
+		if (top.gLangSettingSet == true) {
+		document.title = eLang.getString("fru_info", "STR_FRU_INFO_TITLE");
+			doInit();
+		}
+	}
+	</script>
+</head>
+<body>
+<h3 class="pagetitle"><div class="floatRight" id="wait"></div>
+<script>document.writeln(eLang.getString("fru_info", "STR_FRU_INFO_TITLE"));</script>
+</h3>
+
+<br><select id="_FRUSelector" style="margin-bottom: 15px;"></select><br>
+
+<div class="sysInfoBox" align="left">
+<div id="_mainFRUMessage"></div>
+
+<fieldset class="group" id="_ChassisArea">
+	<legend class="groupCaption">
+<script>document.writeln(eLang.getString("fru_info", "STR_FRU_INFO_CHASSIS"));</script>
+</legend>
+	<table class="dialogTable center normal" cellspacing="0" cellpadding="3">
+		<tbody>
+			<tr id="_chassisTypeRow">
+				<td class="settings_fieldname bold">
+<script>document.writeln(eLang.getString("fru_info", "STR_FRU_INFO_CHAS_TYPE"));</script>
+</td>
+				<td class="settings_field"><span id="_chassisType"></span></td>
+			</tr>
+			<tr id="_chassisModelNumberRow">
+				<td class="settings_fieldname bold">
+<script>document.writeln(eLang.getString("fru_info", "STR_FRU_INFO_CHAS_PART_MOD"));</script>
+</td>
+				<td class="settings_field"><span id="_chassisModelNumber"></span></td>
+			</tr>
+			<tr id="_chassisSerialNumberRow">
+				<td class="settings_fieldname bold">
+<script>document.writeln(eLang.getString("fru_info", "STR_FRU_INFO_CHAS_SN"));</script>
+</td>
+				<td class="settings_field"><span id="_chassisSerialNumber"></span></td>
+			</tr>
+		</tbody>
+	</table>
+</fieldset>
+
+<fieldset class="group" id="_BoardArea">
+	<legend class="groupCaption">
+<script>document.writeln(eLang.getString("fru_info", "STR_FRU_INFO_BD"));</script>
+</legend>
+	<table class="dialogTable center normal" cellspacing="0" cellpadding="3">
+		<tbody>
+			<tr id="_boardManufactureDateRow">
+				<td class="settings_fieldname bold">
+<script>document.writeln(eLang.getString("fru_info", "STR_FRU_INFO_BD_MFG_DATE"));</script>
+</td>
+				<td class="settings_field"><span id="_boardManufactureDate"></span></td>
+			</tr>
+			<tr id="_boardManufacturerRow">
+				<td class="settings_fieldname bold">
+<script>document.writeln(eLang.getString("fru_info", "STR_FRU_INFO_BD_MFGR"));</script>
+</td>
+				<td class="settings_field"><span id="_boardManufacturer"></span></td>
+			</tr>
+			<tr id="_boardProductNameRow">
+				<td class="settings_fieldname bold">
+<script>document.writeln(eLang.getString("fru_info", "STR_FRU_INFO_BD_PROD_NAME"));</script>
+</td>
+				<td class="settings_field"><span id="_boardProductName"></span></td>
+			</tr>
+			<tr id="_boardSerialNumberRow">
+				<td class="settings_fieldname bold">
+<script>document.writeln(eLang.getString("fru_info", "STR_FRU_INFO_CHAS_SN"));</script>
+</td>
+				<td class="settings_field"><span id="_boardSerialNumber"></span></td>
+			</tr>
+			<tr id="_boardModelNumberRow">
+				<td class="settings_fieldname bold">
+<script>document.writeln(eLang.getString("fru_info", "STR_FRU_INFO_BD_PART_MOD"));</script>
+</td>
+				<td class="settings_field"><span id="_boardModelNumber"></span></td>
+			</tr>
+			<tr id="_boardFruFileIDRow">
+				<td class="settings_fieldname bold">
+<script>document.writeln(eLang.getString("fru_info", "STR_FRU_INFO_BD_FRU_ID"));</script>
+</td>
+				<td class="settings_field"><span id="_boardFruFileID"></span></td>
+			</tr>
+		</tbody>
+	</table>
+</fieldset>
+
+<fieldset class="group" id="_ProdArea">
+	<legend class="groupCaption">
+<script>document.writeln(eLang.getString("fru_info", "STR_FRU_INFO_PROD"));</script>
+</legend>
+	<table class="dialogTable center normal" cellspacing="0" cellpadding="3">
+		<tbody>
+			<tr id="_productManufacturerRow">
+				<td class="settings_fieldname bold">
+<script>document.writeln(eLang.getString("fru_info", "STR_FRU_INFO_BD_MFGR"));</script>
+</td>
+				<td class="settings_field"><span id="_productManufacturer"></span></td>
+			</tr>
+			<tr id="_productProductNameRow">
+				<td class="settings_fieldname bold">
+<script>document.writeln(eLang.getString("fru_info", "STR_FRU_INFO_PROD_NAME"));</script>
+</td>
+				<td class="settings_field"><span id="_productProductName"></span></td>
+			</tr>
+			<tr id="_productModelNumberRow">
+				<td class="settings_fieldname bold">
+<script>document.writeln(eLang.getString("fru_info", "STR_FRU_INFO_BD_PART_MOD"));</script>
+</td>
+				<td class="settings_field"><span id="_productModelNumber"></span></td>
+			</tr>
+			<tr id="_productVersionRow">
+				<td class="settings_fieldname bold">
+<script>document.writeln(eLang.getString("fru_info", "STR_FRU_INFO_PROD_VER"));</script>
+</td>
+				<td class="settings_field"><span id="_productVersion"></span></td>
+			</tr>
+			<tr id="_productSerialNumberRow">
+				<td class="settings_fieldname bold">
+<script>document.writeln(eLang.getString("fru_info", "STR_FRU_INFO_CHAS_SN"));</script>
+</td>
+				<td class="settings_field"><span id="_productSerialNumber"></span></td>
+			</tr>
+			<tr id="_productAssetTagRow">
+				<td class="settings_fieldname bold">
+<script>document.writeln(eLang.getString("fru_info", "STR_FRU_INFO_PROD_ASSET"));</script>
+</td>
+				<td class="settings_field"><span id="_productAssetTag"></span></td>
+			</tr>
+			<tr id="_productFruFileIDRow">
+				<td class="settings_fieldname bold">
+<script>document.writeln(eLang.getString("fru_info", "STR_FRU_INFO_BD_FRU_ID"));</script>
+</td>
+				<td class="settings_field"><span id="_productFruFileID"></span></td>
+			</tr>
+		</tbody>
+	</table>
+</fieldset>
+
+</div>
+</body>
+</html>

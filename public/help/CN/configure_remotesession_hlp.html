@@ -1,0 +1,39 @@
+<html>
+  <head>
+ 	<title>远程会话帮助</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+  	<link href='../../style/CN/help_styles.css' rel='stylesheet' type='text/css'/>
+  </head>
+  <body>
+	<div class='closeX'><a href='javascript://' class='closeBtn' onclick='top.frames["header"].closeHelp();'>X</a></div>
+
+	<div class='helpmainhead'>远程会话-帮助</div>
+		<p>本页用来在重定向会话中启用/禁用KVM或存储介质数据加密功能。</p>
+	<h2>KVM加密</h2>
+	<p>在重定向的会话中启用/禁用KVM数据加密功能。可以在支持的加密技术里任意选择一个。</p>
+
+	<h2>仅加密键盘/鼠标</h2>
+	<p>如果启用KVM加密功能被设置为None，键盘和鼠标数据仍然可以利用Blowfish加密技术来加密。
+    这个选项可以在对性能产生影响最少的情况下仍然支持对最重要数据加密。</p>
+
+	<h2>启用存储介质加密功能</h2>
+	<p>在重定向的连接中启用/禁用存储介质数据加密功能。</p>
+
+	<p>禁用加密功能可以提高KVM或存储介质在重定向时的性能。</p>
+
+		<h2>U盘模拟类型</h2>
+			<p>两种类型为：</p>
+			<ul><li>Floppy - 在远程机器上，虚拟U盘将被识别为软驱设备。</li></ul>
+			<ul><li>Hard disk - 在远程机器上，虚拟U盘将被识别为硬盘或可移动硬盘。</li></ul>
+		<h2>Serial Over LAN</h2>
+			<p>设置每个LAN通道启动或关闭Serial Over LAN。请首先在BIOS设置界面中开启Console Redirection，以保证SOL正常工作。</p>
+		<h2>端口转发：</h2>
+		<p>在客户端（网页浏览器和JViewer应用程序）和BMC之间的网络存在NAT(网络地址转换）或者端口转发时才需要设置。</p>
+		<p>输入JViewer客户端使用的重定向服务（远程KVM、虚拟CDROM和虚拟USB/软驱）浏览器端端口号（1024-65535）。</p>
+		<p>如果留空不填，JViewer假定没有网络转换并使用BMC标准端口： 7578, 5120, 5123 （未加密） 或 7582, 5124, 5127 (加密) 分别用于远程KVM、虚拟CDROM和虚拟USB/软驱。</p>
+		<p>客户端IP地址和http/https端口号由浏览器自动提供，无需配置。</p>
+	<div class='helpactionhead'>操作</div>
+	<div class='actionsub'>保存</div>
+		<p>点击按钮以使用所选模式。</p>
+  </body>
+</html>

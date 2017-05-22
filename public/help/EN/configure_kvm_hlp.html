@@ -1,0 +1,114 @@
+<html>
+  <head>
+    <title>Keyboard Macros help</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href='../../style/EN/help_styles.css' rel='stylesheet' type='text/css'/>
+  </head>
+  <body>
+    <div class='closeX'><a href='javascript://' class='closeBtn' onclick='top.frames["header"].closeHelp();'>X</a></div>
+
+    <div class='helpmainhead'>KVM & Media Settings - Help</div>
+        <p>Use this page to enable/disable encryption on KVM or Media during a redirection session.</p>
+    <h2>KVM Encryption</h2>
+    <p>Enable/Disable encryption on KVM data during a redirection session.
+    Choose any one from the supported encryption techniques.</p>
+
+    <h2>Keyboard/Mouse Only</h2>
+    <p>If KVM Encryption is set to None, the Keyboard & Mouse data can still be encrypted using Blowfish encryption.
+    This option has the least performance impact while still encrypting the most important data.</p>
+
+    <h2>Media Encryption</h2>
+    <p>Enable/Disable encryption of Media data during a redirection session.</p>
+
+    <p>Disabling encryption can improve performance of KVM or Media redirection.</p>
+
+        <h2>USB Key Emulation Mode</h2>
+            <p>Two types of emulation are:</p>
+            <ul><li>Floppy - Emulated USB Key will be detected as Floppy drive in remote machine.</li></ul>
+            <ul><li>Hard disk - Emulated USB Key will be detected as Hard disk (or) Removable drive in remote machine.</li></ul>
+
+    <h2>Default Port Settings:</h2>
+        <p>This section allows setting the ports used by KVM and remote media (both standard and secure ports). Do not change these values unless you know the new ports are unused.</p>
+    <div class='helpactionhead'>Actions</div>
+    <div class='actionsub'>Save</div>
+        <p>Click 'Save' to use selected modes.</p>
+
+    <div class='helpmainhead'>Mouse Mode - Help</div>
+        <p>Redirection Console handles mouse emulation from local window to remote screen in one of the following methods:</p>
+            <ul>
+                <li>Absolute</li>
+                <li>Relative</li>
+                <li>Other</li>
+            </ul>
+    <h2>Absolute Mode</h2>
+        <p>Select to have the absolute position of the local mouse sent to the server. Preferred method where supported.
+        Use this mode for Windows OS and newer versions of Linux.</p>
+    <h2>Relative Mode</h2>
+        <p>Select Relative Mode to have the calculated relative mouse position displacement sent to the server. Use this
+        mode for older Linux versions such as Red Hat (RHEL) 5.x.
+        For best results, server and client OS mouse acceleration/threshold settings should match. Alternatively,
+        use the mouse calibration option in JViewer.</p>
+    <h2>Other Mode</h2>
+        <p>Select Other Mode to have the calculated displacement from the local mouse in the centre position, sent to the server. 
+        Under this mode ALT+C should be used to switch between Host and client mouse cursor.
+        Use this mode in special situations such as the SLES 11 Linux OS installation.</p>
+
+    <div class='helpactionhead'>Actions</div>
+
+    <div class='actionsub'>Save</div>
+        <p>Click 'Save' to use selected mode.</p>
+
+    <div class='helpmainhead'>Keyboard Macros - Help</div>
+        <p>Use this page to configure keyboard macro buttons for the Remote Console.</p>
+    <h2>Key Sequence</h2>
+        <p>
+            Sequence of key events to playback when the macro button is pushed.
+            <ul>
+                <li>'+' between keys indicates the keys should be held down together</li>
+                <li>'-' between keys indicates the previous keys should first be released before the new key is pressed</li>
+                <li>'*' inserts a one second pause in the key sequence. Caution: video is not updated during macro execution.</li>
+            </ul>
+        </p>
+        <p>
+            Examples:
+            <ul>
+                <li>Ctrl+Alt+Del
+                <li>Ctrl+B-Enter-**Enter</li>
+                <li>Ctrl+B-Enter-*\*-Enter</li>
+            </ul>
+        </p>
+    <h2>Button Name</h2>
+        <p>
+            The optional short name to appear on the button of the Remote Console.
+            If blank the key sequence string will be used as the name.
+        </p>
+    <h2>Keys</h2>
+        <p>
+            Key names are either a printable character such as "a", "5", "@", etc.
+            or else one of the non-printable keys in the table below.
+            Names in parentheses are aliases for the same key. Numeric keypad keys are prefixed with "NP_".
+        </p>
+        <p>
+            A plain '*' means a pause, use '\*' for the actual '*' key. The '\' key must also be escaped as '\\'.
+            Note that key sequences are sent to the target as scancodes that get interpreted by the target OS,
+            so they will be affected by modifiers such as Numlock as well as the OS keyboard language setting.
+        </p>
+        <table border="1">
+            <tr><td><p>Shift (LShift)</p></td><td><p>RShift</p></td><td><p>Ctrl (LCtrl)</p></td><td><p>RCtrl</p></td></tr>
+            <tr><td><p>Alt (LAlt)</p></td><td><p>RAlt (AltGr)</p></td><td><p>Win (LWin)</p></td><td><p>RWin</p></td></tr>
+            <tr><td><p>Enter</p></td><td><p>Esc</p></td><td><p>F1 - F12</p></td><td><p></p></td></tr>
+            <tr><td><p>Bksp</p></td><td><p>Tab</p></td><td><p>CapsLk</p></td><td><p>Space</p></td></tr>
+            <tr><td><p>Ins</p></td><td><p>Del</p></td><td><p>Home</p></td><td><p>End</p></td></tr>
+            <tr><td><p>PgUp</p></td><td><p>PgDn</p></td><td><p>Context (Menu)</p></td><td><p></p></td></tr>
+            <tr><td><p>Up</p></td><td><p>Left</p></td><td><p>Down</p></td><td><p>Right</p></td></tr>
+            <tr><td><p>NumLk</p></td><td><p>NP_Div</p></td><td><p>NP_Mult</p></td><td><p>NP_Minus</p></td></tr>
+            <tr><td><p>NP_Plus</p></td><td><p>NP_0 - NP_9</p></td><td><p>NP_Dec</p></td><td><p>NP_Enter</p></td></tr>
+            <tr><td><p>PrtSc (SysRq)</p></td><td><p>ScrLk</p></td><td><p>Pause (Break)</p></td><td><p></p></td></tr>
+        </table>
+    <div class='helpactionhead'>Actions</div>
+
+    <div class='actionsub'>Save</div>
+        <p>Click 'Save' to save any changes made.</p>
+
+  </body>
+</html>

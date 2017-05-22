@@ -1,0 +1,60 @@
+<html>
+  <head>
+ 	<title>IPv4 Network help</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  	<link href='../../style/EN/help_styles.css' rel='stylesheet' type='text/css'/>
+  </head>
+  <body>
+	<div class='closeX'><a href='javascript://' class='closeBtn' onclick='top.frames["header"].closeHelp();'>X</a></div>
+
+	<div class='helpmainhead'>IPv4 Network - Help</div>
+		<p>Use this page to configure the network settings for server management.</p>
+        
+	<h2>Enable LAN Failover</h2>
+		<p>
+			Enabling failover bonds all available ethernet interfaces into the first 
+            LAN Channel.  When the primary interfaces leash is lost one of the secondary 
+            interfaces is activated automatically with the same IP address.
+		</p>
+
+	<h2>LAN Channel Number</h2>
+		<p>
+			It lists the LAN Channel(s) available for server management.
+			The LAN channels describe the physical NIC connection on the server.
+			All channels are onboard NICs.
+			The Baseboard Mgmt channel is shared NIC configured for
+			management and shared with the operating system.
+		</p>
+
+	  <h2>MAC Address</h2>
+		<p>The MAC address of the device (read only).</p>
+	  <h2>IP Address</h2>
+		<p>Select the type of IP assignment with the radio buttons.
+		If configuring a static IP, enter the requested IP Address, Subnet Mask,
+		Gateway, Primary DNS and Secondary DNS Server in the given fields.</p>
+		<ul>
+			<li>- IP Address made of 4 numbers separated by dots as in "xxx.xxx.xxx.xxx".</li>
+			<li>- 'xxx' ranges from 0 to 255.</li>
+			<li>- First 'xxx' must not be 0.</li>
+		</ul>		   
+
+	<div class='helpactionhead'>Actions</div>
+
+	<div class='actionsub'>Save</div>
+		<p>Click 'Save' to save any changes made.</p>
+		
+		<p style="color:red;">
+		  <img src='../../res/ui_icons/warning.png'>
+		  <b>NOTE:</b>
+		  The Dedicated Management NIC IP address must be on a different subnet than the baseboard
+		  IP address used for management traffic.
+		</p>
+        <br>
+        <p style="color:red;">
+          <img src='../../res/ui_icons/warning.png'>
+          <b>NOTE:</b>
+          Network settings may not be modified while a remote console redirection session is active. Please close all open remote console redirection sessions before attempting to modify network settings.
+        </p>
+
+  </body>
+</html>

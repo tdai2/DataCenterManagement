@@ -1,0 +1,35 @@
+<html>
+  <head>
+ 	<title>Login help</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  	<link href='../../style/EN/help_styles.css' rel='stylesheet' type='text/css'/>
+  </head>
+  <body>
+	<div class='closeX'><a href='javascript://' class='closeBtn' onclick='top.frames["header"].closeHelp();'>X</a></div>
+
+	<div class='helpmainhead'>Login - Help</div>
+		<p>Use this page to configure login security settings for server management.</p>
+	<h2>Failed Login Attempts</h2>
+		<p>
+			Set the number of failed login attempts a user is allowed before being locked out. Zero means no lockout. Default is 3 attempts.
+		</p>
+	<h2>User Lockout Time (min)</h2>
+		<p>
+			Set the time in minutes that the user is locked out before being allowed to login again. Zero means no lockout and unlocks all currently locked out users. Default is 1 min.
+		</p>
+	<h2>Force HTTPS</h2>
+		<p>
+			Enable this option to force the User to user Secure Login for Web using HTTPS protocol. It will use the certificate uploaded under 'Configuration->SSL'.
+		</p>
+	<h2>Web Session Timeout</h2>
+		<p>
+			Set the maximum web service timeout in seconds. Timeout should be between 60 and 10800 seconds. Default timeout is 1800 seconds.
+		</p>
+
+	<div class='helpactionhead'>Actions</div>
+
+	<div class='actionsub'>Save</div>
+		<p>Click 'Save' to save any changes made.</p>
+
+  </body>
+</html>

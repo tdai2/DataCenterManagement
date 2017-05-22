@@ -1,0 +1,42 @@
+<html>
+  <head>
+ 	<title>LDAP help</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  	<link href='../../style/EN/help_styles.css' rel='stylesheet' type='text/css'/>
+  </head>
+  <body>
+	<div class='closeX'><a href='javascript://' class='closeBtn' onclick='top.frames["header"].closeHelp();'>X</a></div>
+
+	<div class='helpmainhead'>LDAP - Help</div>
+		<p>To enable/disable LDAP, check or uncheck the "Enable LDAP Authentication" checkbox respectively.</p>
+	  <h2>LDAP Authentication</h2>
+		<p>Check this box to enable LDAP authentication, then
+		   enter the required information to access the LDAP server.</p>
+	  <h2>Port</h2>
+		<p>Specify the LDAP Port</p>
+	  <h2>IP Address</h2>
+		<p>The IP address of LDAP server</p>
+			<ul>
+				<li>- IP Address made of 4 numbers separated by dots as in "xxx.xxx.xxx.xxx".</li>
+				<li>- 'xxx' ranges from 0 to 255.</li>
+				<li>- First 'xxx' must not be 0.</li>
+			</ul>
+	  <h2>Searchbase</h2>
+		<p>The searchbase of the LDAP server, e.g.
+		   &quot;dc=my-domain, dc=com&quot;.
+		</p>
+	  <h2>Bind DN</h2>
+		<p>The Distinguished Name of the LDAP server, e.g. 
+		   &quot;cn=Manager, dc=my-domain, dc=com&quot;.
+		</p>
+	  <h2>Bind Password</h2>
+		<p>Authentication password for LDAP server;
+		   the password must be at least 4 characters long.
+		</p>
+
+	<div class='helpactionhead'>Actions</div>
+
+	<div class='actionsub'>Save</div>
+		<p>Save the current settings.</p>
+  </body>
+</html>

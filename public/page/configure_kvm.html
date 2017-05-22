@@ -1,0 +1,208 @@
+<html>
+<head>
+  <script>
+        var cssfile=document.createElement("link");
+        cssfile.setAttribute("rel", "stylesheet");
+        cssfile.setAttribute("type", "text/css");
+        cssfile.setAttribute("href", "../style/"  + top.gLangSetting + "/app_style.css");
+        document.getElementsByTagName("head")[0].appendChild(cssfile);
+  </script>
+  <script src="../lib/bitset.js"></script>
+  <script src="../lib/eVal.js"></script>
+  <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="../lib/ui.js"></script>
+    <script src="../lib/eLang.js"></script>
+    <script>
+        document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/global_str.js\"><\/script>");
+        document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/configure_remotesession_str.js\"><\/script>");
+        document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/configure_mouse_mode_str.js\"><\/script>");
+        document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/configure_keyboard_str.js\"><\/script>");
+    </script>
+    <script src="../impl/configure_kvm_imp.js"></script>
+    <script>
+    onload = function() {
+        if (top.gLangSettingSet == true) {
+        document.title = eLang.getString("configure_remotesession", "STR_CNFG_RMT_SESS_PTITLE");
+        document.getElementById("_saveKVMBtn").setAttribute("value", eLang.getString("configure_remotesession", "STR_CNFG_RMT_SESS_SAVEBTN"));
+        document.getElementById("_MouseModeSaveBtn").setAttribute("value", eLang.getString("configure_mouse_mode", "STR_MOUSE_MODE_SAVE"));
+        document.getElementById("_saveKeysBtn").setAttribute("value", eLang.getString("configure_keyboard", "CONF_KEYBOARD_STR_SAVE"));
+            doInit();
+        }
+    }
+    </script>
+</head>
+<body>
+<fieldset class="group" style="width: 90%; float:left; margin-top: 10px">
+    <legend class="groupCaption">
+        <script>document.writeln(eLang.getString("configure_remotesession", "STR_CNFG_RMT_SESS_PTITLE"));</script>
+    </legend>
+    <p>
+        <script>document.writeln(eLang.getString("configure_remotesession", "STR_CNFG_RMT_SESS_DESC"));</script>
+    </p>
+
+    <div class="subSection">
+        <table cellspacing="5" cellpadding="5" border="0" width="550">
+            <tr>
+                <td><strong><script>document.writeln(eLang.getString("configure_remotesession", "STR_CNFG_RMT_SESS_KVM"));</script></strong></td>
+                <td><select id="_kvmEncrpytion" style="width:120px;"> </select></td>
+            </tr>
+            <tr>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><script>document.writeln(eLang.getString("configure_remotesession", "STR_CNFG_RMT_SESS_BLOWFISH"));</script></strong></td>
+                <td><input type="checkbox" id="_hidEncryption" /><label for='_hidEncryption'><script>document.writeln(eLang.getString("configure_remotesession", "STR_CNFG_RMT_SESS_ENABLE"));</script></label></td>
+            </tr>
+            <tr>
+                <td><strong><script>document.writeln(eLang.getString("configure_remotesession", "STR_CNFG_RMT_SESS_MEDIA"));</script></strong></td>
+                <td><input type="checkbox" id="_mediaEncy" /><label for='_mediaEncy'><script>document.writeln(eLang.getString("configure_remotesession", "STR_CNFG_RMT_SESS_ENABLE"));</script></label></td>
+            </tr>
+            <tr>
+                <td><strong><script>document.writeln(eLang.getString("configure_remotesession", "STR_CNFG_RMT_SESS_USBKEY"));</script></strong></td>
+                <td><select id="_usbEmulationType" style="width:120px;"> </select></td>
+            </tr>
+        </table>
+        <label style="font-weight:bold">
+            <script>document.writeln(eLang.getString("configure_remotesession", "STR_CNFG_RMT_SESS_PORTS"));</script>
+        </label>
+        <br>
+        <table width="550px">
+            <tr align="right">
+                <td>
+                    <script>document.writeln(eLang.getString("configure_remotesession", "STR_CNFG_RMT_SESS_KVM_PORT"));</script>
+                    <input type="text" id="_kvm_port" size=5 maxlength=5 style="text-align:right;"/>
+                </td>
+                <td>
+                    <script>document.writeln(eLang.getString("configure_remotesession", "STR_CNFG_RMT_SESS_CD_PORT"));</script>
+                    <input type="text" id="_cd_port" size=5 maxlength=5 style="text-align:right;"/>
+                </td>
+                <td>
+                    <script>document.writeln(eLang.getString("configure_remotesession", "STR_CNFG_RMT_SESS_FD_PORT"));</script>
+                    <input type="text" id="_fd_port" size=5 maxlength=5 style="text-align:right;"/>
+                </td>
+            </tr>
+            <tr align="right">
+                <td>
+                    <script>document.writeln(eLang.getString("configure_remotesession", "STR_CNFG_RMT_SESS_KVM_SPORT"));</script>
+                    <input type="text" id="_kvm_sport" size=5 maxlength=5 style="text-align:right;"/>
+                </td>
+                <td>
+                    <script>document.writeln(eLang.getString("configure_remotesession", "STR_CNFG_RMT_SESS_CD_SPORT"));</script>
+                    <input type="text" id="_cd_sport" size=5 maxlength=5 style="text-align:right;"/>
+                </td>
+                <td>
+                    <script>document.writeln(eLang.getString("configure_remotesession", "STR_CNFG_RMT_SESS_FD_SPORT"));</script>
+                    <input type="text" id="_fd_sport" size=5 maxlength=5 style="text-align:right;"/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="btnTray" style="width: 360px;">
+        <input type="button" class="classicBtn" id="_saveKVMBtn" />
+    </div>
+</fieldset>
+
+<fieldset class="group" style="width: 90%; float:left; margin-top: 10px">
+    <legend class="groupCaption">
+        <script>document.writeln(eLang.getString("configure_mouse_mode", "STR_MOUSE_MODE_HEADING"));</script>
+    </legend>
+
+    <script>document.writeln(eLang.getString("configure_mouse_mode", "STR_MOUSE_MODE_DESCRIPTION"));</script>
+    <div class="subSection">
+        <h4 id="_mInfo">
+            <script>document.writeln(eLang.getString("configure_mouse_mode", "STR_MOUSE_MODE_CURMODE"));</script>
+        </h4>
+        <p>
+            <input type="radio" name="mouseMode" id="_absMod"/> <label for="_absMod">
+            <script>document.writeln(eLang.getString("configure_mouse_mode", "STR_MOUSE_MODE_SETABS"));</script></label>
+            <br>
+            <input type="radio" name="mouseMode" id="_relMod"/> <label for="_relMod">
+            <script>document.writeln(eLang.getString("configure_mouse_mode", "STR_MOUSE_MODE_SETREL"));</script></label>
+            <br>
+            <input type="radio" name="mouseMode" id="_otherMod"/> <label for="_otherMod">
+            <script>document.writeln(eLang.getString("configure_mouse_mode", "STR_MOUSE_MODE_SETOTHER"));</script></label>
+        </p>
+     </div>
+     <div class="btnTray" style="width: 360px;">
+     <input type="button" class="classicBtn" id="_MouseModeSaveBtn" />
+     </div>
+</fieldset>
+
+<fieldset class="group" style="width: 90%; float:left; margin-top: 10px">
+    <legend class="groupCaption">
+        <script>document.writeln(eLang.getString("configure_keyboard", "CONF_KEYBOARD_PAGE_TITLE"));</script>
+    </legend>
+
+    <p>
+    <script>document.writeln(eLang.getString("configure_keyboard", "CONF_KEYBOARD_PAGE_DESC"));</script>
+    </p>
+
+    <div class="subSection">
+        <table cellspacing="0" cellpadding="5" border="0" width="450">
+            <tr>
+                <th/>
+                <th>
+                    <label style="font-weight:bold">
+                    <script>document.writeln(eLang.getString("configure_keyboard", "CONF_KEYBOARD_STR_KEY_SEQUENCE"));</script>
+                    </label>
+                </th>
+                <th>
+                    <label style="font-weight:bold">
+                    <script>document.writeln(eLang.getString("configure_keyboard", "CONF_KEYBOARD_STR_BUTTON_NAME"));</script>
+                    </label>
+                </th>
+            </tr>
+            <tr>
+                <td>#1</td>
+                <td><input type="text" id="_m0_value" size=32 maxlength=64/></td>
+                <td><input type="text" id="_m0_name" size=12 maxlength=12/></td>
+            </tr>
+            <tr>
+                <td>#2</td>
+                <td><input type="text" id="_m1_value" size=32 maxlength=64/></td>
+                <td><input type="text" id="_m1_name" size=12 maxlength=12/></td>
+            </tr>
+            <tr>
+                <td>#3</td>
+                <td><input type="text" id="_m2_value" size=32 maxlength=64/></td>
+                <td><input type="text" id="_m2_name" size=12 maxlength=12/></td>
+            </tr>
+            <tr>
+                <td>#4</td>
+                <td><input type="text" id="_m3_value" size=32 maxlength=64/></td>
+                <td><input type="text" id="_m3_name" size=12 maxlength=12/></td>
+            </tr>
+            <tr>
+                <td>#5</td>
+                <td><input type="text" id="_m4_value" size=32 maxlength=64/></td>
+                <td><input type="text" id="_m4_name" size=12 maxlength=12/></td>
+            </tr>
+            <tr>
+                <td>#6</td>
+                <td><input type="text" id="_m5_value" size=32 maxlength=64/></td>
+                <td><input type="text" id="_m5_name" size=12 maxlength=12/></td>
+            </tr>
+            <tr>
+                <td>#7</td>
+                <td><input type="text" id="_m6_value" size=32 maxlength=64/></td>
+                <td><input type="text" id="_m6_name" size=12 maxlength=12/></td>
+            </tr>
+            <tr>
+                <td>#8</td>
+                <td><input type="text" id="_m7_value" size=32 maxlength=64/></td>
+                <td><input type="text" id="_m7_name" size=12 maxlength=12/></td>
+            </tr>
+            <tr>
+                <td>#9</td>
+                <td><input type="text" id="_m8_value" size=32 maxlength=64/></td>
+                <td><input type="text" id="_m8_name" size=12 maxlength=12/></td>
+            </tr>
+            <tr>
+                <td>#10</td>
+                <td><input type="text" id="_m9_value" size=32 maxlength=64/></td>
+                <td><input type="text" id="_m9_name" size=12 maxlength=12/></td>
+            </tr>
+        </table>
+        <div class="btnTray" style="width: 360px;"><input type="button" class="classicBtn" id="_saveKeysBtn" /></div>
+    </div>
+</fieldset>
+</body>
+</html>

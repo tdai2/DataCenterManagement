@@ -1,0 +1,34 @@
+<html>
+  <head>
+ 	<title>Virtual Front Panel Help</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  	<link href='../../style/EN/help_styles.css' rel='stylesheet' type='text/css'/>
+  </head>
+  <body>
+	<div class='closeX'><a href='javascript://' class='closeBtn' onclick='top.frames["header"].closeHelp();'>X</a></div>
+
+	<div class='helpmainhead'>Virtual Front Panel Help</div>
+		<p>This VFP provide the front panel functionality virtually.</p>
+	  <h2>Power Button</h2>
+		<p>Power button is used to Power ON or Power Off </p>
+	  <h2>Reset Button</h2>
+		<p>Reset Button is used to reset the server while system is ON </p>
+	  <h2>Chassis Button</h2>
+		<p>
+			When Chassis ID button is pressed then the chassis ID LED changes to solid on. If the button is pressed again the chassis ID LED turns off.
+		</p>
+	  <h2>Status LED </h2>
+		<p>
+			Status LED will reflect the system status LED status and it automatically sync with BMC every 60 secs. If any abnormal occurred in system then status LED will change accordingly. Thermal fault means Fault occurred in one of Thermal sensors present in BMC Fan fault means Fault occurred in one of the system fan fault System fault means Fault occurred because of system errors Power fault means Fault occurred in one of Power sensors Here, Fault means sensor value crossed upper non critical or upper critical value or lower non critical value or lower critical value.
+		</p>
+	  <h2>Power LED</h2>
+		<p>
+			Power LED shows system power status. If LED is green then System is ON. If LED is grey then System is OFF.
+		</p>
+  	<h2>Chassis ID LED</h2>
+	<p>
+		Chassis ID LED shows the current system chassis ID status If Chassis ID is blue then Chassis ID is Indefinite ON If Chassis ID is grey then Chassis ID is OFF.
+	</p>
+
+  </body>
+</html>

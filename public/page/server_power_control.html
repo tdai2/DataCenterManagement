@@ -1,0 +1,73 @@
+<html>
+<head>
+  <script>
+		var cssfile=document.createElement("link");
+		cssfile.setAttribute("rel", "stylesheet");
+		cssfile.setAttribute("type", "text/css");
+		cssfile.setAttribute("href", "../style/"  + top.gLangSetting + "/app_style.css");
+		document.getElementsByTagName("head")[0].appendChild(cssfile);
+  </script>  
+  <title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script src="../lib/ui.js"></script>
+	<script src="../lib/eLang.js"></script>
+	<script>
+		document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/global_str.js\"><\/script>");
+		document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/server_power_control_str.js\"><\/script>");
+	</script>
+	<script src="../impl/server_power_control_imp.js"></script>
+
+  
+	<script>
+	onload = function() {
+		if (top.gLangSettingSet == true) {
+		document.title = eLang.getString("server_power_control", "STR_SRVR_PWR_TITLE");
+		var elmt = document.getElementById("_prfmAction");
+		elmt.setAttribute("value", eLang.getString("server_power_control", "STR_SRVR_PWR_ACT"));
+			doInit();
+		}
+	}
+	</script>
+</head>
+<body>
+<h3 class="pagetitle"><div class="floatRight" id="wait"></div>
+<script>document.writeln(eLang.getString("server_power_control", "STR_SRVR_PWR_HEADING"));</script>
+</h3>
+
+<p>
+<script>document.writeln(eLang.getString("server_power_control", "STR_SRVR_PWR_DESCRIPTION"));</script>
+</p>
+
+	<div class="subSection">
+		<span id="_statusMsg"></span>
+		&nbsp; &nbsp; &nbsp; &nbsp;
+		<span id="_statusMsg2"></span>
+
+		<p><input type="radio" name="pwrSrvr" id="_resetSrvr" /> 
+<script>document.writeln(eLang.getString("server_power_control", "STR_SRVR_PWR_RESET"));</script>
+</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="_forceBIOS" /><label for="_forceBIOS">
+<script>document.writeln(eLang.getString("server_power_control", "STR_SRVR_PWR_FORCE_BIOS"));</script></label>
+</p>
+
+		<p><input type="radio" name="pwrSrvr" id="_iPwrOffSrvr" /> 
+<script>document.writeln(eLang.getString("server_power_control", "STR_SRVR_PWR_OFF"));</script>
+</p>
+<p><input type='radio' name='pwrSrvr' id='_oPwrOffSrvr'  /><script>document.writeln(eLang.getString("server_power_control", "STR_SRVR_PWR_GRACEFUL_SHUTDOWN"));</script></p> 
+		<p><input type="radio" name="pwrSrvr" id="_pwrOnSrvr" />
+<script>document.writeln(eLang.getString("server_power_control", "STR_SRVR_PWR_ON"));</script>
+</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="_forceBIOSpwron" /><label for="_forceBIOSpwron">
+<script>document.writeln(eLang.getString("server_power_control", "STR_SRVR_PWR_FORCE_BIOS"));</script></label>
+</p>
+		<p><input type="radio" name="pwrSrvr" id="_pwrCycleSrvr" />
+<script>document.writeln(eLang.getString("server_power_control", "STR_SRVR_PWR_CYCLE"));</script>
+</p>
+	</div>
+
+<div class="btnTray" style="width: 290px;"><input type="button" class="classicBtn" id="_prfmAction" /></div>
+
+
+</body>
+</html>

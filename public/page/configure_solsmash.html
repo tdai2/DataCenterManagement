@@ -1,0 +1,76 @@
+<html>
+<head>
+  <script>
+        var cssfile=document.createElement("link");
+        cssfile.setAttribute("rel", "stylesheet");
+        cssfile.setAttribute("type", "text/css");
+        cssfile.setAttribute("href", "../style/"  + top.gLangSetting + "/app_style.css");
+        document.getElementsByTagName("head")[0].appendChild(cssfile);
+  </script>
+  <script src="../lib/bitset.js"></script>
+  <script src="../lib/eVal.js"></script>
+  <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="../lib/ui.js"></script>
+    <script src="../lib/eLang.js"></script>
+    <script>
+        document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/global_str.js\"><\/script>");
+        document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/configure_solsmash_str.js\"><\/script>");
+    </script>
+    <script src="../impl/configure_solsmash_imp.js"></script>
+    <script>
+    onload = function() {
+        if (top.gLangSettingSet == true) {
+        document.title = eLang.getString("configure_solsmash", "STR_CFG_SOLPTITLE");
+        document.getElementById("_saveSOLBtn").setAttribute("value", eLang.getString("configure_solsmash", "STR_CFG_SOLSAVEBTN"));
+        document.getElementById("_saveSMASHBtn").setAttribute("value", eLang.getString("configure_solsmash", "STR_CFG_SOLSAVEBTN"));
+            doInit();
+        }
+    }
+    </script>
+</head>
+<body>
+<fieldset class="group" style="width: 90%; float:left; margin-top: 10px">
+    <legend class="groupCaption">
+        <script>document.writeln(eLang.getString("configure_solsmash", "STR_CFG_SOL"));</script>
+    </legend>
+    <p>
+        <script>document.writeln(eLang.getString("configure_solsmash", "STR_CFG_SOLDESC"));</script>
+    </p>
+    <table cellspacing="5" cellpadding="5" border="0" width="550">
+        <tr>
+            <td id="_enableSOL1cell" style="display:none"><input type="checkbox" id="_enableSOL1" /><label id='_enableSOL1name'><script>document.writeln(eLang.getString("configure_solsmash", "STR_CFG_ENABLE"));</script></label></td>
+        </tr>
+        <tr id="_enableSOL2row" style="display:none">
+            <td><input type="checkbox" id="_enableSOL2" /><label id='_enableSOL2name'><script>document.writeln(eLang.getString("configure_solsmash", "STR_CNFG_RMT_SESS_ENABLE"));</script></label></td>
+        </tr>
+        <tr id="_enableSOL3row" style="display:none">
+            <td><input type="checkbox" id="_enableSOL3" /><label id='_enableSOL3name'><script>document.writeln(eLang.getString("configure_solsmash", "STR_CNFG_RMT_SESS_ENABLE"));</script></label></td>
+        </tr>
+    </table>
+     <div class="btnTray" style="width: 360px;">
+     <input type="button" class="classicBtn" id="_saveSOLBtn" />
+     </div>
+</fieldset>
+
+<fieldset class="group" style="width: 90%; float:left; margin-top: 10px">
+    <legend class="groupCaption">
+        <script>document.writeln(eLang.getString("configure_solsmash", "STR_CFG_SMASH"));</script>
+    </legend>
+    <p>
+        <script>document.writeln(eLang.getString("configure_solsmash", "STR_CFG_SMASHDESC"));</script>
+    </p>
+    <table cellspacing="5" cellpadding="5" border="0" width="550">
+        <tr>
+            <td>
+                <script>document.writeln(eLang.getString("configure_solsmash", "STR_CFG_PORT"));</script>
+                <input type="text" id="_smash_port" size=5 maxlength=5 style="text-align:right;"/>
+            </td>
+        </tr>
+    </table>
+     <div class="btnTray" style="width: 360px;">
+     <input type="button" class="classicBtn" id="_saveSMASHBtn" />
+     </div>
+</fieldset>
+</body>
+</html>

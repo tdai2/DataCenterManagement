@@ -1,0 +1,120 @@
+<html>
+<head>
+  <script>
+		var cssfile=document.createElement("link");
+		cssfile.setAttribute("rel", "stylesheet");
+		cssfile.setAttribute("type", "text/css");
+		cssfile.setAttribute("href", "../style/"  + top.gLangSetting + "/app_style.css");
+		document.getElementsByTagName("head")[0].appendChild(cssfile);
+  </script>  
+  <script src="../lib/bitset.js"></script>
+  <title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script src="../lib/ui.js"></script>
+	<script src="../lib/eLang.js"></script>
+	<script>
+		document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/global_str.js\"><\/script>");
+		document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/sys_info_str.js\"><\/script>");
+	</script>
+	<script src="../impl/sys_info_imp.js"></script>
+
+	<script>
+	onload = function() {
+		if (top.gLangSettingSet == true) {
+		document.title = eLang.getString("sys_info", "STR_SYS_INFO_TITLE");
+			doInit();
+		}
+	}
+	</script>
+</head>
+<body>
+<h3 class="pagetitle"><div class="floatRight" id="wait"></div>
+<script>document.writeln(eLang.getString("sys_info", "STR_SYS_INFO_HEADING"));</script>
+</h3>
+
+<div class="sysInfoBox" align="left">
+
+<fieldset class="group">
+	<legend class="groupCaption">
+<script>document.writeln(eLang.getString("sys_info", "STR_SYS_INFO_TITLE"));</script>
+</legend>
+	<table class="dialogTable center normal" cellspacing="0" cellpadding="3">
+		<tbody>
+			<tr>
+				<td class="settings_fieldname bold">
+<script>document.writeln(eLang.getString("sys_info", "STR_SYS_INFO_HOST_POWER_STATUS"));</script>
+</td>
+				<td class="settings_field"><span id="_statusMsg"></span></td>
+			</tr>
+			<tr>
+				<td class="settings_fieldname bold">
+<script>document.writeln(eLang.getString("sys_info", "STR_SYS_INFO_RMM3_STATUS"));</script>
+</td>
+				<td class="settings_field"><span id="_RMM3Status"></span></td>
+			</tr>
+			<tr>
+				<td class="settings_fieldname bold">
+<script>document.writeln(eLang.getString("sys_info", "STR_SYS_INFO_DEV_AVAIL"));</script>
+</td>
+				<td class="settings_field"><span id="_deviceAvailable"></span></td>
+			</tr>
+			<tr>
+				<td class="settings_fieldname bold">
+<script>document.writeln(eLang.getString("sys_info", "STR_SYS_INFO_BMC_FW_BUILD_TIME"));</script>
+</td>
+				<td class="settings_field"><span id="_buildTime"></span></td>
+			</tr>
+			<tr>
+				<td class="settings_fieldname bold">
+			<script>document.writeln(eLang.getString("sys_info", "STR_SYS_INFO_BIOS_ID"));</script>
+			</td>
+							<td class="settings_field"><span id="_BIOSStr"></span></td>
+			</tr>
+			<tr>
+				<td class="settings_fieldname bold">
+<script>document.writeln(eLang.getString("sys_info", "STR_SYS_INFO_BMC_FW_REV"));</script>
+</td>
+				<td class="settings_field"><span id="_bmcFwRev"></span></td>
+			</tr>
+			<tr>
+				<td class="settings_fieldname bold">
+<script>document.writeln(eLang.getString("sys_info", "STR_SYS_INFO_BOOT_FW_REV"));</script>
+</td>
+				<td class="settings_field"><span id="_bootFwRev"></span></td>
+			</tr>
+			<tr>
+				<td class="settings_fieldname bold">
+<script>document.writeln(eLang.getString("sys_info", "STR_SYS_INFO_SDR_PKG_VER"));</script>
+</td>
+				<td class="settings_field"><span id="_sdrVersion"></span></td>
+			</tr>
+			<tr id="_MEVersionRow">
+				<td class="settings_fieldname bold">
+<script>document.writeln(eLang.getString("sys_info", "STR_SYS_INFO_ME_FW_VER"));</script>
+</td>
+				<td class="settings_field"><span id="_MEVersion"></span><span id="_MEbldPatch"></span></td>
+			</tr>
+            <tr>
+                <td class="settings_fieldname bold">
+            <script>document.writeln(eLang.getString("sys_info", "STR_SYS_INFO_BRD_SERIAL"));</script>
+            </td>
+                <td class="settings_field"></span><span id="_brdserial"></span></td>
+            </tr>
+			<tr>
+				<td class="settings_fieldname bold">
+<script>document.writeln(eLang.getString("sys_info", "STR_SYS_INFO_SYS_HEALTH"));</script>
+</td>
+				<td class="settings_field">
+					<span id="_LEDHealthGreen"></span>&nbsp;
+					<span id="_LEDFaultAmber"></span>&nbsp;
+					<span id="_LEDIDBlue"></span>
+				</td>
+			</tr>
+
+		</tbody>
+	</table>
+</fieldset>
+
+</div>
+</body>
+</html>

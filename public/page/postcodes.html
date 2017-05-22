@@ -1,0 +1,53 @@
+<html>
+<head>
+  <script>
+        var cssfile=document.createElement("link");
+        cssfile.setAttribute("rel", "stylesheet");
+        cssfile.setAttribute("type", "text/css");
+        cssfile.setAttribute("href", "../style/"  + top.gLangSetting + "/app_style.css");
+        document.getElementsByTagName("head")[0].appendChild(cssfile);
+  </script>
+  <script src="../lib/bitset.js"></script>
+  <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script src="../lib/ui.js"></script>
+        <script src="../lib/eLang.js"></script>
+        <script>
+                document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/global_str.js\"><\/script>");
+                document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/postcodes_str.js\"><\/script>");
+        </script>
+        <script src="../impl/postcodes_imp.js"></script>
+        <script src="../lib/eExt.js"></script>
+
+        <script>
+        onload = function() {
+                if (top.gLangSettingSet == true) {
+                    document.title = eLang.getString("postcodes", "STR_POST_TITLE");
+                    doInit();
+                }
+        }
+        </script>
+</head>
+<body>
+    <h3 class="pagetitle"><div class="floatRight" id="wait"></div>
+        <script>document.writeln(eLang.getString("postcodes", "STR_POST_TITLE"));</script>
+    </h3>
+    <p>
+    <script>document.writeln(eLang.getString("postcodes", "STR_POST_DESCRIPTION"));</script>
+    </p>
+    <div><script>document.writeln(eLang.getString("postcodes", "STR_POST_TIMEHEADER"));</script><select id="_timeSelect" name="timeSel"></select></div>
+    <br><div id="_POSTBox"></div>
+    <fieldset class="group" style="width: 45%; float:left">
+        <legend class="groupCaption">
+            <script>document.writeln(eLang.getString("postcodes", "STR_POST_PREVIOUS"));</script>
+        </legend>
+        <div id="_PrevPOST" style="text-align:center"></div><table id="_PrevPOSTTable" style="width:100%"></table>
+    </fieldset>
+    <fieldset class="group" style="width: 45%; float:left">
+        <legend class="groupCaption">
+            <script>document.writeln(eLang.getString("postcodes", "STR_POST_CURRENT"));</script>
+        </legend>
+            <div id="_CurrPOST" style="text-align:center"></div><table id="_CurrPOSTTable" style="width:100%"></table>
+    </fieldset>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<html>
+  <head>
+ 	<title>VLAN设置帮助</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+  	<link href='../../style/CN/help_styles.css' rel='stylesheet' type='text/css'/>
+  </head>
+  <body>
+	<div class='closeX'><a href='javascript://' class='closeBtn' onclick='top.frames["header"].closeHelp();'>X</a></div>
+
+	<div class='helpmainhead'>VLAN设置-帮助</div>
+		<p>本页用于在指定网络通道上配置802.1Q VLAN专用网络。</p>
+        
+	<h2>网络通道</h2>
+		<p>下拉框里列出了服务器管理中可用的网络通道。网络通道描述了物理网卡在服务器上的连接。
+			所有通道都是板载网卡。該Baseboard Mgmt通道是和操作系统共享的网络接口，配置后用于服务器管理。
+		</p>
+
+	  <h2>打开VLAN</h2>
+		<p>
+			勾选在该项将在通道上打开VLAN。打开后，BMC仅仅接收带有正确VLAN标示符的数据包。所有送出的数据包都用该VLAN ID标示。
+
+		</p>
+
+	  <h2>VLAN ID</h2>
+		<p>
+			指定VLAN ID，值从1到4094。每次只能使用一个ID。
+		</p>
+						
+	  <h2>VLAN优先级</h2>
+		<p>
+			指定的VLAN优先级将置于送出的数据包中，值从0（尽力服务）到7（最高级）；1代表最低优先级。0为默认值。
+
+		</p>
+
+	<div class='helpactionhead'>操作</div>
+
+	<div class='actionsub'>保存</div>
+		<p>点击按钮以保存所做的更改。</p>
+  </body>
+</html>

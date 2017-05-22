@@ -1,0 +1,30 @@
+<html>
+<head>
+	<script>
+		top.gLangSetting=window.opener.top.gLangSetting;
+		top.gLangSettingSet = window.opener.top.gLangSettingSet;
+	</script>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script src="../lib/ui.js"></script>
+	<script src="../lib/eLang.js"></script>
+	<script>
+		document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/global_str.js\"><\/script>");
+		document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/jnlp_launcher_str.js\"><\/script>");
+	</script>
+	<script src="../impl/jnlp_launcher_imp.js"></script>
+
+	
+	<script>
+	onload = function() {
+		if (top.gLangSettingSet == true) {
+		document.title = eLang.getString("jnlp_launcher", "STR_JNLPPG_TITLE");
+			doInit();
+		}
+	}
+	</script>
+</head>
+<body> 
+<script>document.writeln(eLang.getString("jnlp_launcher", "STR_JNLPPG_DESC"));</script>
+ </body>
+</html>

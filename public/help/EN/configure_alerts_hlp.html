@@ -1,0 +1,41 @@
+<html>
+  <head>
+ 	<title>Alerts help</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  	<link href='../../style/EN/help_styles.css' rel='stylesheet' type='text/css'/>
+  </head>
+  <body>
+	<div class='closeX'><a href='javascript://' class='closeBtn' onclick='top.frames["header"].closeHelp();'>X</a></div>
+
+	<div class='helpmainhead'>Alerts - Help</div>
+		<p>When one of the selected system events occurs, an alert is generated and sent to the configured destination(s). Each LAN channel can have up to two destinations.</p>
+
+        <h2>Globally Enable Platform Event Filtering</h2>
+            <p>Global control for enabling or disabling platform event filtering. When filtering is globally disabled through this setting, alerts will not be sent. This can be used to prevent sending alerts until you have fully specified your desired alerting policies.</p>
+        <h2>Log Events For Filter Actions</h2>
+            <p>When a filter match is made, and an action is taken, an event is added to the system event log.</p>
+        <h2>Select Events</h2>
+            <p>Select one or more system events that will trigger an Alert. Clearing all events disables Alerts. These events correspond to the IPMI preconfigured Platform Event Filters.</p>
+        <h2>LAN Channel</h2>
+            <p>Select which LAN Channel to configure destinations for. Each LAN Channel has its own set of up to two destinations. If LAN failover mode is enabled, then only one channel will be listed for configuration</p>
+        <h2>Alert Destinations</h2>
+            <p>Alert destinations can be one of two types:
+                <ul style='margin-top:0px; margin-bottom:0px;'>
+                    <li>SNMP Trap</li>
+                    <li>Email (requires Alert Email to be configured)</li>
+                </ul>
+            </p>
+
+	<div class='helpactionhead'>Actions</div>
+
+	<div class='actionsub'>Check All</div>
+		<p>Check all events to generate Alerts.</p>
+	<div class='actionsub'>Clear All</div>
+		<p>Uncheck all events so no Alerts will be generated.</p>
+	<div class='actionsub'>Save</div>
+		<p>Click 'Save' to save any changes made.</p>
+	<div class='actionsub'>Send Test Alert</div>
+		<p>To test whether an alert will reach its destination, set the LAN Channel field to the desired channel and configure at least one destination. 
+		   Then click 'Send Test Alerts' to send a simple test alert to the destination(s) for that Channel.</p>
+  </body>
+</html>

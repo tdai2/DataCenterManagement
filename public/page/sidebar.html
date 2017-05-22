@@ -1,0 +1,73 @@
+<html>
+
+
+
+<!--  =====================================================================    -->
+
+<head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script src="../lib/ui.js"></script>
+	<script src="../lib/eLang.js"></script>
+	<script>
+		document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/global_str.js\"><\/script>");
+		document.write("<script language = \"Javascript\", src = \"../str/" + top.gLangSetting + "/sidebar_str.js\"><\/script>");
+	</script>
+	<script src="../impl/sidebar_imp.js"></script>
+
+	
+  <script>
+		var cssfile=document.createElement("link");
+		cssfile.setAttribute("rel", "stylesheet");
+		cssfile.setAttribute("type", "text/css");
+		cssfile.setAttribute("href", "../style/"  + top.gLangSetting + "/sidebar_style.css");
+		document.getElementsByTagName("head")[0].appendChild(cssfile);
+  </script>  
+	<script>
+	onload = function() {
+		if (top.gLangSettingSet == true) {
+			doInit();
+		}
+	}
+	</script>
+</head>
+
+<!--  =====================================================================    -->
+
+<body leftmargin="4px" rightmargin="0">
+
+<!--  <span id='options'></span><br><br>  --> 
+<table width="100%">
+	<tr height="30px">
+		<td id="options">&nbsp;</td> <!--  Options  -->
+	</tr>
+
+	<tr valign="top">
+		<td id="_optioncontainer">
+		</td>
+	</tr>
+
+<!--  05/16/08 - jco - Move Refresh link to horizontal menu bar
+	<tr>
+		<td id='_refreshlinktd'>
+		<hr>
+		<a id='_refreshlink' class='refreshlink' href='javascript:parent.frames.mainFrame.location.reload(1)'>Refresh Page</a>
+		<hr>
+		</td>
+	</tr>
+  -->	
+<!--  05/16/08 - jco - Move Logout link to horizontal menu bar
+	<tr>
+		<td id='_optionlogout'>
+		<a id='_disconnect' class='disconnect' href='javascript:disconnect();'>Logout</a>
+		</td>
+	</tr>
+  -->
+</table>
+
+</body>
+
+<!--  =====================================================================    -->
+
+</html>
+

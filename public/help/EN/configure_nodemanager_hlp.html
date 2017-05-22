@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>Node Manager Configuration help</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href='../../style/EN/help_styles.css' rel='stylesheet' type='text/css'/>
+  </head>
+  <body>
+    <div class='closeX'><a href='javascript://' class='closeBtn' onclick='top.frames["header"].closeHelp();'>X</a></div>
+
+    <div class='helpmainhead'>Node Manager Configuration - Help</div>
+        <p>Use this page to configure the system's Node Manager.</p>
+    <h2>Node Manager Power Policies</h2>
+        <p>This table lists the currently-configured policies. Selecting an item from the table will populate the editable fields in the settings section below.</p>
+    <h2>Policy Number</h2>
+        <p>The policy number to add/edit/delete. Valid range is 0-255.</p>
+		<p>Policy number 0 - HW Protection policy is created automatically by Intel NM and cannot be modified or removed.</p>
+        <p>In the policy table, policy numbers with an asterisk (*) are policies set externally using a non-platform domain. Changing parameters on these policies will not affect their triggers, trigger limits, reporting periods, correction timeouts, or aggressive CPU throttling settings.</p>
+    <h2>Enabled</h2>
+        <p>Check this box if the policy is to be enabled immediately.</p>
+    <h2>System Shutdown</h2>
+        <p>Check this box to enable a system shutdown if the policy is exceeded and cannot be corrected within the correction timeout period. The operating system will be given 30 seconds to shut down gracefully. If the system is still not shut down after 30 seconds, the BMC will initiate an immediate shutdown.</p>
+    <h2>Log Event</h2>
+        <p>Check this box to enable the node manager to send a platform event message to the BMC when a policy is exceeded.</p>
+    <h2>Power Limit</h2>
+        <p>The desired platform power limit, in watts. </p>
+    <h2>Use Policy Timers</h2>
+        <p>If enabled, you may configure policy suspend periods. Each policy may have up to five suspend periods.</p>
+        <p>Suspend periods are repeatable by day-of-week. Start and stop times are designated in 24 hour format, in increments of 6 minutes. To specify a suspend period crossing midnight, two suspend periods must be used.</p>
+        <p>When possible, suspend periods are translated and displayed as enabled periods. This may result in a different number of timers displayed in the timer configuration area than advertised in the master policy list.</p>
+        <p>All Node Manager policies using these timers must be saved as suspend periods. The BMC will automatically attempt to translate enabled periods to suspend periods before saving.</p>
+        <p>If a set of suspend periods cannot be translated to enabled periods (because the number of timers would exceed 5), a warning will be displayed. This is non-fatal, and will still allow saving the policy and periods.</p>
+        <p>If a set of enabled periods cannot be translated to suspend periods (because the number of timers would exceed 5), an error will be displayed. A policy cannot be saved in this condition as it would exceed node manager limits.</p>
+        <p>If you need to set a large number of suspend or enabled periods, it is recommended that multiple identical policies be used.</p>
+    <h2>Policy Defaults</h2>
+        <p>For all policies set through this web page, several default values will be applied:</p>
+        <ul style='margin-top:0px; margin-bottom:0px;'>
+            <li>Domain: Platform - Power for the entire platform.</li>
+            <li>Trigger: None - Always monitor after end of POST.</li>
+            <li>Aggressive CPU Power Correction: AUTO - Use of T-states and memory throttling controlled by policy exception actions.</li>
+            <li>Trigger Limit: None.</li>
+            <li>Reporting Period: 10 seconds - This is a rolling average for reporting only. It will not affect the average power monitored by the node manager.</li>
+            <li>Correction Timeout: 22.555 seconds - Maximum time for the NM to correct power before taking an exception action (i.e. shutdown or alert).</li>
+        </ul>
+            
+    <div class='helpactionhead'>Actions</div>
+
+    <div class='actionsub'>Save</div>
+        <p>Saves the current settings to the specified policy number.</p>
+    <div class='actionsub'>Delete</div>
+        <p>Deletes the selected policy.</p>
+    <div class='actionsub'>Cancel</div>
+        <p>Discards changes to selected policy.</p>
+</body>
+</html>
