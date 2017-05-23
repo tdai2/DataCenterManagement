@@ -11,6 +11,7 @@ var login = require('./routes/login');
 var credentials = require('./credentials');
 
 var app = express();
+var router = express.Router();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -27,22 +28,47 @@ app.use(express.static(path.join(__dirname, '.')));
 app.use(express.static(path.join(__dirname,'pubilc')))
 app.use(bodyParser())
 
+//app.all('*',login.form);
+
 app.get('/login',login.form);
 app.post('/login', login.submit )
 
-app.use('/login', function(req,res){
-  res.sendFile(__dirname+'/views/login.html');
-});
 
-app.use('/welcome',function(req,res){
-  res.render('welcome',{title:"Tony"});
+app.get('/welcome',function(req,res){
+  console.log(req.cookies);
+  res.render('welcome',{title:req.cookies.userName});
 });
 
 app.use('/reject',function(req,res){
-  res.render('reject',{title:"Tony"})
+  res.render('reject',{title:req.cookies.userName})
+});
+
+//app.use('/',login);
+
+
+/*
+app.get('/login',login.form);
+app.post('/login', login.submit )
+
+router.post('/login', function(req,res){
+  res.sendFile(__dirname+'/views/login.html');
+});
+app.all('*', users.requireAuthentication);
+app.use('/', users);
+
+
+
+
+app.get('/welcome',function(req,res){
+  res.render('welcome',{title:Tony});
 });
 
 
+app.use('/reject',function(req,res){
+  res.render('reject',{title:Tony})
+});
+
+*/
 const model = require('./model');
 let User = model.User;
 
