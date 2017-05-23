@@ -7,7 +7,22 @@ var User = require('../models/User');
 /* GET login page. */
 
 
+module.exports.requireAuthentication = function(req,res,next){
+  if(req.path == '/login'){
+    next();
+    return;
+  }
+  if(req.cookies!=undefined){
+    if(req.cookies["userName"]!=undefined){
+      next();
+      return;
+  }
+  }
+  
 
+  res.redirect('/login');
+  
+};
 
 module.exports.form = function(req,res){  
   res.sendFile(path.join(__dirname,'../views/login.html'));

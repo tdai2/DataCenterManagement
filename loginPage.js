@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, '.')));
 app.use(express.static(path.join(__dirname,'pubilc')))
 app.use(bodyParser())
 
-//app.all('*',login.form);
+app.all('*',login.requireAuthentication);
 
 app.get('/login',login.form);
 app.post('/login', login.submit )
