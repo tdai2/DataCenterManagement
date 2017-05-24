@@ -12,8 +12,8 @@ module.exports.requireAuthentication = function(req,res,next){
     next();
     return;
   }
-  if(req.cookies!=undefined){
-    if(req.cookies["userName"]!=undefined){
+  if(req.session!=undefined){
+    if(req.session.userName!=undefined){
       next();
       return;
   }
@@ -36,10 +36,10 @@ module.exports.submit = function(req,res,next){
   User.findOne({where:{uId:data.uId}}).then(user=>{
     console.log(JSON.stringify(user));
     if(user.upassword == data.upassword){
-      res.cookie('userName', user.uname);
+      //res.cookie('userName', user.uname);
+      req.session.userName = user.uname;
       console.log('Loing in successfully');
-      //res.render('welcome',{title:"Tony"}); 
-      //res.render(path.join(__dirname,'../views/welcome'),{title:user.uname});
+      
       res.redirect('/welcome');
       
     }

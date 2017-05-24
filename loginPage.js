@@ -24,6 +24,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser(credentials.cookieSecret));
+app.use(require('express-session')());
 app.use(express.static(path.join(__dirname, '.')));
 app.use(express.static(path.join(__dirname,'pubilc')))
 app.use(bodyParser())
@@ -36,11 +37,11 @@ app.post('/login', login.submit )
 
 app.get('/welcome',function(req,res){
   console.log(req.cookies);
-  res.render('welcome',{title:req.cookies.userName});
+  res.render('welcome',{title:req.session.userName});
 });
 
 app.use('/reject',function(req,res){
-  res.render('reject',{title:req.cookies.userName})
+  res.render('reject',{title:req.session.userName})
 });
 
 //app.use('/',login);
