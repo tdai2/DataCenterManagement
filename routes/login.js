@@ -2,9 +2,12 @@ var express = require('express');
 var router = express.Router();
 var path = require('path');
 var User = require('../models/User');
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
 
 
 /* GET login page. */
+
 
 
 module.exports.requireAuthentication = function(req,res,next){
@@ -17,9 +20,7 @@ module.exports.requireAuthentication = function(req,res,next){
       next();
       return;
   }
-  }
-  
-
+  }  
   res.redirect('/login');
   
 };

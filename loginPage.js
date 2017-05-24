@@ -4,6 +4,12 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var passport = require('passport')
+var LocalStrategy = require('passport-local').Strategy;
+var express_session = require("express-session");
+
+
+var User = require('./models/User');
 
 //var index = require('./routes/index');
 //var users = require('./routes/users');
@@ -24,15 +30,55 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser(credentials.cookieSecret));
-app.use(require('express-session')());
+app.use(express_session({secret: 'blog.fens.me', cookie: { maxAge: 60000 }}));
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use(express.static(path.join(__dirname, '.')));
 app.use(express.static(path.join(__dirname,'pubilc')))
 app.use(bodyParser())
 
-app.all('*',login.requireAuthentication);
+//app.all('*',login.requireAuthentication);
 
-app.get('/login',login.form);
-app.post('/login', login.submit )
+passport.use('local',new LocalStrategy(
+  function(uId,upassword,done){
+    var user = {
+            id: '1',
+            username: 'admin',
+            password: 'pass'
+        }; // 可以配置通过数据库方式读取登陆账号
+    return done(null,user);
+
+    if(uId!=='11341084'){
+      console.log("uId is"+uId);
+      return done(null,user);
+      //return done(null,false,{message:"Incorrect username."});
+      
+    }
+    if(upassword!=='superuser'){
+      console.log("upassword is"+upassword);
+      return done(null,false,{message:"Incorrect password."});
+    }
+    return done(null,user);
+  }
+));
+
+passport.serializeUser(function (user, done) {//保存user对象
+    done(null, user);//可以通过数据库方式操作
+});
+
+passport.deserializeUser(function (user, done) {//删除user对象
+    done(null, user);//可以通过数据库方式操作
+});
+
+
+
+app.get('/',login.form);
+app.post('/login', passport.authenticate('local',{
+  failureRedirect:'/reject',
+  successRedirect:'/welcome'
+  }));
+
 
 
 app.get('/welcome',function(req,res){
@@ -40,9 +86,16 @@ app.get('/welcome',function(req,res){
   res.render('welcome',{title:req.session.userName});
 });
 
-app.use('/reject',function(req,res){
+app.get('/reject',function(req,res){
   res.render('reject',{title:req.session.userName})
 });
+
+app.all('*', isLoggedIn);
+function isLoggedIn(req, res, next) {
+    if (req.isAuthenticated()){
+        return next();}
+    res.redirect('/login');
+}
 
 //app.use('/',login);
 
@@ -70,8 +123,7 @@ app.use('/reject',function(req,res){
 });
 
 */
-const model = require('./model');
-let User = model.User;
+
 
 console.log("modle import complete");
 /*
