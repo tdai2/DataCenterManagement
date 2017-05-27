@@ -25,7 +25,8 @@ module.exports.requireAuthentication = function(req,res,next){
 };
 
 module.exports.form = function(req,res){  
-  res.sendFile(path.join(__dirname,'../views/login.html'));
+  var fileName = path.join(__dirname,'../views/login.html');
+  res.sendFile(fileName);
 };
 
 
@@ -41,7 +42,6 @@ module.exports.submit = function(req,res,next){
       //res.render('welcome',{title:"Tony"}); 
       //res.render(path.join(__dirname,'../views/welcome'),{title:user.uname});
       res.redirect('/welcome');
-      
     }
     else{
       res.redirect('/reject');

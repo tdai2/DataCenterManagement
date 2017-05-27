@@ -3,8 +3,8 @@
 	<head>
 		<title></title>
 		<meta http-equiv='Content-type' content='text/html; charset=utf-8'/>
-		<script language="Javascript" src="/lib/ui.js"></script>
-		<script language="Javascript" src="/lib/eLang.js"></script>
+		<script language="Javascript" src="lib/ui.js"></script>
+		<script language="Javascript" src="lib/eLang.js"></script>
 		<script language="Javascript" src="index_imp.js"></script>
 		<script>
 			/*
@@ -20,9 +20,7 @@
 			}
 			*/
 			
-			//Tony temp commnets
-			//var lang = fnCookie.read('lang');
-			var lang = false;
+			var lang = fnCookie.read('lang');
 
 			var gLangSettingSet = false;
 
@@ -37,20 +35,19 @@
 
 			onload = function() {
 				gLangSettingSet = true;
-				loadFrames();
-				getManufacturerName();
+				doInit();
 			}
 
 			function loadFrames() {
-				document.getElementById("SIDEBAR").src = "/page/sidebar.html";
-				document.getElementById("HEADER").src = "/page/header.html";
+				document.getElementById("SIDEBAR").src = "page/sidebar.html";
+				document.getElementById("HEADER").src = "page/header.html";
 			}
 			
 			
 		
 		</script>
 		<script>
-			document.write("<script language = \"Javascript\" src = \"./str/" + gLangSetting + "/common_str.js\"><\/script>");
+			document.write("<script language = \"Javascript\" src = \"/str/" + gLangSetting + "/common_str.js\"><\/script>");
 		</script>
 		
 	</head>
