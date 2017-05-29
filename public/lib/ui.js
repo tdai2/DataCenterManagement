@@ -152,8 +152,14 @@ function updateHelpSection()
 		top.frames["header"].openHelp();
 	}
 }
+function validateSession(){
+	;
+}
 
+var validateSessResp = function(){;}
 
+/*
+//Tony comments this function to make the websit simple. however Tony's new function doesn't deal with session expire problem.
 function validateSession()
 {
 	if(window.location.href.indexOf('http')!=-1)
@@ -161,6 +167,8 @@ function validateSession()
 		xmit.get({url:"/rpc/WEBSES/validate.asp",onrcv:validateSessResp, status:''});
 	}
 }
+
+
 
 var validateSessResp = function()
 {
@@ -172,7 +180,7 @@ var validateSessResp = function()
 	}
 }
 
-
+*/
 
 //______________________________________________________________________________
 //==============================================================================

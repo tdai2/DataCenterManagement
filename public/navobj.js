@@ -2,11 +2,11 @@ var gLang = "EN"
 
 TOPNAV={
 	items:[
-		{label:"STR_TOPNAV_SYSTEM_INFORMATION", level:0, func:"", page:"sys_info.html", nav:"SYSINFO_LEFTNAV", enabled:1, userprops:{}},
-		{label:"STR_TOPNAV_SERVER_HEALTH", level:0, func:"", page:"welcome_serverhealth.html", nav:"SRVR_HEALTH_LEFTNAV", enabled:1, userprops:{}},
-		{label:"STR_TOPNAV_CONFIGURATION", level:0, func:"", page:"welcome_configuration.html", nav:"CONFIG_LEFTNAV", enabled:1, userprops:{}},
-		{label:"STR_TOPNAV_SVRDIAG", level:0, func:"", page:"welcome_serverdiag.html", nav:"SVR_DIAG_LEFTNAV", enabled:1, userprops:{}},
-		{label:"STR_TOPNAV_REMOTE_CONTROL", level:0, func:"", page:"welcome_remotecontrol.html", nav:"RMCNTRL_LEFTNAV", enabled:1, userprops:{}}
+		{label:"STR_TOPNAV_DATACENTER_OVERVIEW", level:0, func:"", page:"sys_info.html", nav:"SYSINFO_LEFTNAV", enabled:1, userprops:{}},
+		{label:"STR_TOPNAV_DATACENTER_MANAGEMENT", level:0, func:"", page:"welcome_serverhealth.html", nav:"SRVR_HEALTH_LEFTNAV", enabled:1, userprops:{}},
+		{label:"STR_TOPNAV_USER_MANAGEMENT", level:0, func:"", page:"welcome_configuration.html", nav:"USER_MANAGEMENT", enabled:1, userprops:{}},
+		//{label:"STR_TOPNAV_SVRDIAG", level:0, func:"", page:"welcome_serverdiag.html", nav:"SVR_DIAG_LEFTNAV", enabled:1, userprops:{}},
+		//{label:"STR_TOPNAV_REMOTE_CONTROL", level:0, func:"", page:"welcome_remotecontrol.html", nav:"RMCNTRL_LEFTNAV", enabled:1, userprops:{}}
 	]
 };
 
@@ -26,6 +26,11 @@ SRVR_HEALTH_LEFTNAV={
 		{label:"STR_SRVR_HEALTH_LEFTNAV_SENSOR_READINGS", level:0, func:"", page:"/page/sensor_reading.html", nav:"", enabled:1, userprops:{"icon":'/res/icons/monitor.jpg', "ptitle":'STR_SH_SENSOR_READING_PTITLE', "pdesc":'STR_SH_SENSOR_READING_PDESC', "level":1, "id":'SNSR_RDNG', "pid":'SRVR_HLTH'}},
 		{label:"STR_SRVR_HEALTH_LEFTNAV_EVENT_LOG", level:0, func:"", page:"/page/monitoring_events.html", nav:"", enabled:1, userprops:{"icon":'/res/icons/monitor.jpg', "ptitle":'STR_SH_EVENT_LOG_PTITLE', "pdesc":'STR_SH_EVENT_LOG_PDESC', "level":1, "id":'EVNT_LOG', "pid":'SRVR_HLTH'}},
 		{label:"STR_SRVR_HEALTH_LEFTNAV_POWER_STATS", level:0, func:"", page:"/page/power_stats.html", nav:"", enabled:1, userprops:{"icon":'/res/icons/monitor.jpg', "ptitle":'STR_POWER_STATS_PTITLE', "pdesc":'STR_POWER_STATS_PDESC', "level":1, "id":'POWER_STATS', "pid":'SRVR_HLTH'}}		
+	]
+};
+USER_MANAGEMENT={
+	items:[
+		{label:"STR_CONFIG_LEFTNAV_USERS", level:0, func:"", page:"/page/configure_user.html", nav:"", enabled:1, userprops:{"icon":'/res/icons/users.jpg', "ptitle":'STR_CFG_CONF_USER_PTITLE', "pdesc":'STR_CFG_CONF_USER_PDESC', "level":1, "id":'USERS', "pid":'CONFIGURE'}},
 	]
 };
 CONFIG_LEFTNAV={

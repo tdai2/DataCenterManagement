@@ -32,7 +32,8 @@ function CheckRole()
 
 function OnCheckRole()
 {
-var curPriv = WEBVAR_JSONVAR_GET_ROLE.WEBVAR_STRUCTNAME_GET_ROLE[0]['CURPRIV'];
+//var curPriv = WEBVAR_JSONVAR_GET_ROLE.WEBVAR_STRUCTNAME_GET_ROLE[0]['CURPRIV'];
+
 	// user must have OPERATOR(3) or ADMINISTRATOR(4) privilege to see this page
 	if((curPriv != 3) && (curPriv != 4))
 	{

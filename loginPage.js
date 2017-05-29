@@ -25,7 +25,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser(credentials.cookieSecret));
 app.use(express.static(path.join(__dirname, '.')));
-app.use(express.static(path.join(__dirname,'pubilc')))
+app.use(express.static(path.join(__dirname,'public')))
 app.use(bodyParser())
 
 app.all('*',login.requireAuthentication);
@@ -33,10 +33,15 @@ app.all('*',login.requireAuthentication);
 app.get('/login',login.form);
 app.post('/login', login.submit )
 
-
+/*
 app.get('/welcome',function(req,res){
   console.log(req.cookies);
   res.render('welcome',{title:req.cookies.userName});
+});
+*/
+app.get('/welcome',function(req,res){
+  console.log(req.cookies);
+  res.sendFile(path.join(__dirname,'./public/index.html'));
 });
 
 app.use('/reject',function(req,res){

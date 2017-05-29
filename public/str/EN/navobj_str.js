@@ -4,9 +4,9 @@
 
 eLang.navobj_strings = {};
 
-eLang.navobj_strings["STR_TOPNAV_SERVER_HEALTH"] = "Server Health";
-eLang.navobj_strings["STR_TOPNAV_REMOTE_CONTROL"] = "Remote Control";
-eLang.navobj_strings["STR_TOPNAV_CONFIGURATION"] = "Configuration";
+eLang.navobj_strings["STR_TOPNAV_DATACENTER_OVERVIEW"] = "Datacenter overview";
+eLang.navobj_strings["STR_TOPNAV_DATACENTER_MANAGEMENT"] = "Datacenter Management";
+eLang.navobj_strings["STR_TOPNAV_USER_MANAGEMENT"] = "User Management";
 eLang.navobj_strings["STR_TOPNAV_SYSTEM_INFORMATION"] = "System Information";
 eLang.navobj_strings["STR_TOPNAV_SVRDIAG"] = "Server Diagnostics";
 eLang.navobj_strings["STR_SYSINFO_LEFTNAV_FIRMWARE_INFORMATION"] = "Firmware Information";
