@@ -12,6 +12,8 @@ var credentials = require('./credentials');
 
 var app = express();
 var router = express.Router();
+var usersController = require("./controllers/users.controller")
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -28,10 +30,17 @@ app.use(express.static(path.join(__dirname, '.')));
 app.use(express.static(path.join(__dirname,"public")));
 app.use(bodyParser())
 
+
 //app.all('*',login.requireAuthentication);
+//app.use('/',routes);
 
 app.get('/login',login.form);
-app.post('/login', login.submit )
+app.post('/login', login.submit );
+app.get("/api/findUser/:id", usersController.findById);
+app.get("/api/usersList/", usersController.list);
+
+//require('./routes/users.js')(app)
+
 
 /*
 app.get('/welcome',function(req,res){
@@ -77,7 +86,7 @@ app.use('/reject',function(req,res){
 
 */
 const model = require('./model');
-let User = model.User;
+//let User = model.User;
 
 console.log("modle import complete");
 /*

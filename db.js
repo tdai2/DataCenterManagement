@@ -94,6 +94,8 @@ exp.generateId = generateId;
 
 module.exports = exp;
 
+
+
 /*
 module.exports = {
     STRING:Sequelize.STRING,
