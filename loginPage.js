@@ -34,10 +34,19 @@ app.use(bodyParser())
 //app.all('*',login.requireAuthentication);
 //app.use('/',routes);
 
+app.all('*',function(req,res,next){
+  res.header("Access-Control-Allow-Origin","*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
+  res.header("X-Powered-By",' 3.2.1')
+  res.header("Content-Type", "application/json;charset=utf-8");
+  next();
+})
+
 app.get('/login',login.form);
 app.post('/login', login.submit );
-app.get("/api/findUser/:id", usersController.findById);
-app.get("/api/usersList/", usersController.list);
+app.get("/api/user/:id", usersController.findById);
+app.get("/api/user/", usersController.list);
 
 //require('./routes/users.js')(app)
 
@@ -54,6 +63,8 @@ app.get('/welcome',function(req,res){
   console.log(req.cookies);
   res.sendFile(path.join(__dirname,'./public/index.html'));
 });
+
+
 
 app.use('/reject',function(req,res){
   res.render('reject',{title:req.cookies.userName})
